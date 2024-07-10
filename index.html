@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<title>live</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        .social-icons ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social-icons ul li {
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        .social-icons ul li a .fa {
+            font-size: 30px;
+            color: #262626;
+            line-height: 60px;
+            transition: .5s;
+        }
+
+        .social-icons ul li a {
+            display: block;
+            width: 50px;
+            height: 60px;
+            background: #7a7a7c;
+            text-align: center;
+            transform: rotate(318deg) skew(199deg) translate(0, 0);
+            transition: .5s;
+            box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+            position: relative;
+        }
+
+        .social-icons ul li a:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            height: 100%;
+            width: 20px;
+            background: #0a1116;
+            transform: .5s;
+            transform: rotate(0deg) skewY(-45deg);
+        }
+
+        .social-icons ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            height: 20px;
+            width: 100%;
+            background: #464646;
+            transform: .5s;
+            transform: rotate(0deg) skewX(-45deg);
+        }
+
+        .social-icons ul li a:hover {
+            transform: skew(5deg) translate(20px, -50px);
+            box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+        }
+
+        .social-icons ul li:hover .fa {
+            color: #fff;
+        }
+
+        .social-icons ul li:hover:nth-child(1) a {
+            background: #3b5998;
+        }
+
+        .social-icons ul li:hover:nth-child(1) a:before {
+            background: #365492;
+        }
+
+        .social-icons ul li:hover:nth-child(1) a:after {
+            background: #4a69ad;
+        }
+
+        .social-icons ul li:hover:nth-child(2) a {
+            background: #00aced;
+        }
+
+        .social-icons ul li:hover:nth-child(2) a:before {
+            background: #097aa5;
+        }
+
+        .social-icons ul li:hover:nth-child(2) a:after {
+            background: #53b9e0;
+        }
+
+        .social-icons ul li:hover:nth-child(3) a {
+            background: #dd4b39;
+        }
+
+        .social-icons ul li:hover:nth-child(3) a:before {
+            background: #b33a2b;
+        }
+
+        .social-icons ul li:hover:nth-child(3) a:after {
+            background: #e66a5a;
+        }
+
+        .social-icons ul li:hover:nth-child(4) a {
+            background: #e4405f;
+        }
+
+        .social-icons ul li:hover:nth-child(4) a:before {
+            background: #d81c3f;
+        }
+
+        .social-icons ul li:hover:nth-child(4) a:after {
+            background: #e46880;
+        }
+
+        section.one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            text-align: left;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
+            width: 40rem;
+        }
+
+        .card .left-content,
+        .card .right-content {
+            padding: 10px;
+        }
+
+        .card .left-content {
+            flex: 1;
+        }
+
+        .card .right-content {
+            flex: 2;
+        }
+
+        .card .picture {
+            display: inline-block;
+            height: 130px;
+            width: 130px;
+            z-index: 1;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .card .picture::before {
+            content: "";
+            width: 100%;
+            height: 0;
+            border-radius: 50%;
+            background-color: #1f1b1b;
+            position: absolute;
+            bottom: 135%;
+            right: 0;
+            left: 0;
+            opacity: 0.9;
+            transform: scale(3);
+            transition: all 0.3s linear 0s;
+        }
+
+        .card:hover .picture::before {
+            height: 100%;
+        }
+
+        .card .picture::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #1f1b1b;
+            position: absolute;
+            top: 0;
+            left: 0%;
+            z-index: -1;
+        }
+
+        .card .picture img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            transform: scale(1);
+            transition: all 0.9s ease 0s;
+        }
+
+        .card:hover .picture img {
+            box-shadow: 0 0 0 14px #f7f5ec;
+            transform: scale(0.7);
+        }
+
+        /* Main content section */
+        .card .main-content {
+            margin-bottom: -19px;
+        }
+
+        .card .main-content .title {
+            display: block;
+            font-size: 15px;
+            color: #1f1b1b;
+            text-transform: capitalize;
+            margin: 5px 37px 0;
+        }
+
+        .card .main-content .name {
+            padding: 0;
+            margin: 8px;
+            text-transform: uppercase;
+        }
+
+        .card .social {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #1f1f1b;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            transition: all 0.5s ease 0s;
+        }
+
+        .card:hover .social {
+            bottom: 0;
+        }
+
+        .card .social li {
+            display: inline-block;
+        }
+
+        .card .social li a {
+            display: block;
+            padding: 10px;
+            font-size: 17px;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+        }
+
+        .card .social li a:hover {
+            color: #3e3b44;
+            background-color: #f7f5ec;
+            transition: 0.5s;
+        }
+
+        /* Skill section */
+        .skills {
+            text-align: left;
+            padding: 15px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skills ul li {
+            border: 1px solid #1f1b1b;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 12px;
+            margin: 0 7px 7px 0;
+            padding: 7px;
+        }
+
+        .skills ul li:hover {
+            background-color: #1f1b1b;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <div class="smalllogo">
+            <a href="#welcome-section" class="logolink">
+                <h2> <i class="fas fa-code"></i> NGUYEN XUAN HAI</h2>
+            </a>
+        </div>
+
+        <nav class="nav" id="navbar">
+            <div class="logo">
+                <a href="index.html" id="logo">
+                    <h1> <i class="fas fa-code" style="font-size: 20px;"></i> NGUYEN XUAN HAI</h1>
+                </a>
+            </div>
+
+            <ul class="nav__list" id="navlinkitems">
+                <li class="nav__item">
+                    <a href="#home-section" class="nav__link" id="home">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about-section" class="nav__link" id="about">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#skills-section" class="nav__link" id="service">Skills</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#projects-section" class="nav__link" id="work">Work</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#contacts-section" class="nav__link" id="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section one" id="home-section">
+        <div class="card">
+            <div class="left-content">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/nguyenhai0913" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="mailto:nxhai0913@gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/nguyenhai091375" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="picture">
+                    <img class="img-fluid" src="image/profile.png" alt="Profile Picture">
+                </div>
+                <div class="main-content">
+                    <h3 class="name">Nguyễn Xuân Hải</h3>
+                    <h4 class="title">Full-Stack developer 👨‍💻</h4>
+                </div>
+                <!-- Social Media Links -->
+                <ul class="social">
+                    <li><a href="https://github.com/xuanhai0913" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" class="fa fa-telegram"></a></li>
+                </ul>
+                <!-- Skills -->
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>C++</li>
+                        <li>Javascript</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Node.js</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Github</li>
+                        <li>Git</li>
+                        <li>VS code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section two" id="about-section">
+    </section>
+
+    <section class="section three skill3" id="skills-section">
+        <h2>Skills : </h2>
+        <div class="skills-list">
+          <div class="skill-item">
+            <i class="fab fa-cuttlefish fa-3x"></i>
+            <span>C++</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js fa-3x"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-python fa-3x"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-html5 fa-3x"></i>
+            <span>HTML</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-css3-alt fa-3x"></i>
+            <span>CSS</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-node fa-3x"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react fa-3x"></i>
+            <span>React</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-github fa-3x"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-git fa-3x"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code fa-3x"></i>
+            <span>VS Code</span>
+          </div>
+        </div>
+      </section>
+      
+
+    <section class="section four" id="projects-section">
+    </section>
+
+    <section class="section five" id="contacts-section">
+    </section>
+
+    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

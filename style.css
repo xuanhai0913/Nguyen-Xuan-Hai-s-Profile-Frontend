@@ -519,3 +519,21 @@ section {
   cursor: pointer;
   transition: 0.5s;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 1.2em;
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

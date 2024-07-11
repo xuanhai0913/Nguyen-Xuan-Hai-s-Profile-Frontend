@@ -415,37 +415,6 @@ section {
   text-align: center;
 }
 
-.toggle-label {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.toggle-btn {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-btn::before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
 .theme-toggle-btn {
   cursor: pointer;
   position: relative;
@@ -479,6 +448,23 @@ input[type="checkbox"]:checked + .theme-toggle-btn {
 
 input[type="checkbox"]:checked + .theme-toggle-btn::before {
   transform: translateX(26px);
+}
+
+/* Animation */
+@keyframes toggleTheme {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.theme-toggle-btn::before {
+  animation: toggleTheme 0.3s linear;
 }
 
 /* Animation */

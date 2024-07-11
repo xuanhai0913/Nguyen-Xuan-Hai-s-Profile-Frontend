@@ -422,9 +422,9 @@ section {
   width: 100px;
   height: 40px;
   background-color: var(--togglebg);
-  border: 2px solid var(--border-color); /* Viền cho nút */
+  border: 2px solid var(--border-color);
   border-radius: 20px;
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền và viền */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -458,23 +458,21 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + .theme-toggle-btn {
   background-color: var(--primary-bg);
-  border-color: var(--border-color); /* Đổi màu viền khi toggle */
+  border-color: var(--border-color);
 }
 
 input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
-  transform: translateX(26px); /* Điều chỉnh vị trí khi toggle */
+  transform: translateX(64px);
 }
 
 [data-theme="dark"] .toggle-description {
-  color: var(--color-dark); /* Màu cho mô tả dark */
-    transform: translateX(26px);
-
+  color: var(--color-dark);
 }
 
 [data-theme="light"] .toggle-description {
-  color: var(--color-light); /* Màu cho mô tả light */
+  color: var(--color-light);
 }
-  transform: translateX(26px);
+
 
 
 

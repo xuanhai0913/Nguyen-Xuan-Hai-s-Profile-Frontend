@@ -486,6 +486,42 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
   background-color: var(--toggleslider-dark); /* Màu slider cho chế độ Dark */
   transform: translateX(-4px); /* Đẩy slider sang vị trí bên trái */
 }
+.two .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.two .content {
+  position: relative;
+}
+
+.two h2 {
+  font-size: 3rem;
+  color: var(--color);
+  text-transform: uppercase;
+}
+
+.two .fa-darkweb,
+.two .fa-lightweb {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+[data-theme="dark"] .two h2 {
+  color: var(--color-dark);
+}
+
+[data-theme="dark"] .two .fa-darkweb {
+  color: var(--color-dark);
+}
+
+[data-theme="light"] .two h2 {
+  color: var(--color-light);
+}
+
+[data-theme="light"] .two .fa-lightweb {
+  color: var(--color-light);
+}
 
 /* Animation */
 @keyframes toggleTheme {

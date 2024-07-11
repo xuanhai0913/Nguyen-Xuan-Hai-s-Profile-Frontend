@@ -352,7 +352,7 @@ section {
 .section.one {
   background-color: var(--bg-color);
   min-height: 60vh; /* Điều chỉnh chiều cao tối thiểu */
-  padding: 20px; /* Thêm padding để nội dung không dính sát mép */
+  padding: 50px; /* Thêm padding để nội dung không dính sát mép */
   display: flex;
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */

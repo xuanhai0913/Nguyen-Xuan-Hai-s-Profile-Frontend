@@ -82,6 +82,19 @@ body {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 
 }
+#navbar {
+  transition: background-color 0.3s ease;
+}
+
+/* Màu nền khi cuộn trang */
+.navbar-scrolled {
+  background-color: #fff; /* Thay đổi thành màu nền mong muốn khi cuộn trang */
+}
+
+/* Màu nền khi lên đầu trang */
+.navbar-transparent {
+  background-color: transparent; /* Hoặc áp dụng màu nền trong suốt khi lên đầu trang */
+}
 
 .nav__list {
   list-style: none;

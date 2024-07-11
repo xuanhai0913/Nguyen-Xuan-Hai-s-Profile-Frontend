@@ -20,6 +20,11 @@
   --svgcolor-dark: #fff;
 }
 
+:root {
+  --header-bg-light: #ffffff;
+  --header-bg-dark: #333333;
+}
+
 html {
   scroll-behavior: smooth;
 }

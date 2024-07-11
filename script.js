@@ -48,6 +48,8 @@ themeToggleBtn.addEventListener('click', () => {
     document.documentElement.style.setProperty('--toggleslider', '#e9dcdc');
     document.documentElement.style.setProperty('--roundcolor', '#333');
     document.documentElement.style.setProperty('--svgcolor', '#fff');
+        document.documentElement.style.setProperty('--border-color', '#333'); /* Điều chỉnh màu viền cho dark theme */
+
   } else {
     document.documentElement.style.setProperty('--bg-color', '#ffffff');
     document.documentElement.style.setProperty('--primary-bg', '#8c43ff');
@@ -56,6 +58,8 @@ themeToggleBtn.addEventListener('click', () => {
     document.documentElement.style.setProperty('--toggleslider', '#fff');
     document.documentElement.style.setProperty('--roundcolor', '#fff');
     document.documentElement.style.setProperty('--svgcolor', '#111');
+        document.documentElement.style.setProperty('--border-color', '#ddd'); /* Điều chỉnh màu viền cho light theme */
+
   }
 });
 

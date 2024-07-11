@@ -48,3 +48,32 @@ themeToggleBtn.addEventListener('click', () => {
     document.documentElement.style.setProperty('--svgcolor', '#111');
   }
 });
+
+const body = document.body;
+const navbar = document.getElementById('navbar');
+
+function updateHeaderBackground(theme) {
+  if (theme === 'dark') {
+    navbar.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--header-bg-dark');
+  } else {
+    navbar.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--header-bg-light');
+  }
+}
+
+// Gọi hàm updateHeaderBackground khi trang được tải và khi thay đổi chủ đề
+document.addEventListener('DOMContentLoaded', function () {
+  updateHeaderBackground(body.dataset.theme);
+
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  themeToggleBtn.addEventListener('click', function () {
+    const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+    body.dataset.theme = currentTheme;
+    updateHeaderBackground(currentTheme);
+  });
+});
+
+// Cập nhật màu nền của header khi cuộn trang
+window.addEventListener('scroll', function () {
+  const currentTheme = body.dataset.theme;
+  updateHeaderBackground(currentTheme);
+});

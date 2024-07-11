@@ -31,10 +31,9 @@ navLinks.forEach((link) => {
   });
 });
 
-// Sự kiện toggle theme
 themeToggleCheckbox.addEventListener('change', () => {
   const currentTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', currentTheme);
+  body.dataset.theme = currentTheme;
 
   if (currentTheme === 'dark') {
     document.documentElement.style.setProperty('--bg-color', '#333333');
@@ -44,7 +43,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     document.documentElement.style.setProperty('--toggleslider', '#e9dcdc');
     document.documentElement.style.setProperty('--roundcolor', '#333');
     document.documentElement.style.setProperty('--svgcolor', '#fff');
-    document.documentElement.style.setProperty('--border-color', '#333'); /* Điều chỉnh màu viền cho dark theme */
+    document.documentElement.style.setProperty('--border-color', '#333'); /* Màu viền cho dark theme */
   } else {
     document.documentElement.style.setProperty('--bg-color', '#ffffff');
     document.documentElement.style.setProperty('--primary-bg', '#8c43ff');
@@ -53,6 +52,6 @@ themeToggleCheckbox.addEventListener('change', () => {
     document.documentElement.style.setProperty('--toggleslider', '#fff');
     document.documentElement.style.setProperty('--roundcolor', '#fff');
     document.documentElement.style.setProperty('--svgcolor', '#111');
-    document.documentElement.style.setProperty('--border-color', '#ddd'); /* Điều chỉnh màu viền cho light theme */
+    document.documentElement.style.setProperty('--border-color', '#ddd'); /* Màu viền cho light theme */
   }
 });

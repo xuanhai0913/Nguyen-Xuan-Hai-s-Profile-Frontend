@@ -491,6 +491,7 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column; /* Xếp nút toggle xuống dòng dưới */
 }
 .two .container {
   max-width: 800px;

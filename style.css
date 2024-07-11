@@ -366,7 +366,7 @@ section {
   text-align: center;
 border-left: 200px solid var(--bg-color); /* Thêm viền bên trái */
   border-right: 200px solid var(--bg-color); /* Thêm viền bên phải */
-  padding: 100px; /* Điều chỉnh padding theo cần thiết */
+  padding: 50px; /* Điều chỉnh padding theo cần thiết */
 }
 @media (max-width: 800px) {
   .section.one {

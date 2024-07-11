@@ -467,6 +467,21 @@ input[type="checkbox"]:checked + .theme-toggle-btn::before {
 .theme-toggle-btn::before {
   animation: toggleTheme 0.3s linear;
 }
+@keyframes toggleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.toggle-animation::before {
+  animation: toggleAnimation 0.3s linear;
+}
 
 
 .section.three {

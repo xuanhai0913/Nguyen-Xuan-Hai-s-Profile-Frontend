@@ -6,6 +6,7 @@ const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
 const themeToggleBtn = document.querySelector('.theme-toggle-btn');
 const checkbox = document.getElementById('theme-toggle-checkbox');
 const toggleSlider = document.querySelector('.toggle-slider');
+const toggleDescription = document.querySelector('.toggle-description');
 
 // Sự kiện cuộn trang
 window.onscroll = function () {
@@ -34,11 +35,11 @@ navLinks.forEach((link) => {
   });
 });
 
-themeToggleCheckbox.addEventListener('click', () => {
-  const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
-  body.dataset.theme = currentTheme;
-
-  if (currentTheme === 'dark') {
+themeToggleCheckbox.addEventListener('change', () => {
+  if (themeToggleCheckbox.checked) {
+    document.body.dataset.theme = 'dark';
+    toggleSlider.style.transform = 'translateX(0)';
+    toggleDescription.textContent = 'Dark';
     document.documentElement.style.setProperty('--bg-color', '#333333');
     document.documentElement.style.setProperty('--primary-bg', '#333');
     document.documentElement.style.setProperty('--color', '#e9dcdc');
@@ -46,8 +47,11 @@ themeToggleCheckbox.addEventListener('click', () => {
     document.documentElement.style.setProperty('--toggleslider', '#e9dcdc');
     document.documentElement.style.setProperty('--roundcolor', '#333');
     document.documentElement.style.setProperty('--svgcolor', '#fff');
-    document.documentElement.style.setProperty('--border-color', '#333'); /* Màu viền cho dark theme */
+    document.documentElement.style.setProperty('--border-color', '#666666');
   } else {
+    document.body.dataset.theme = 'light';
+    toggleSlider.style.transform = 'translateX(64px)';
+    toggleDescription.textContent = 'Light';
     document.documentElement.style.setProperty('--bg-color', '#ffffff');
     document.documentElement.style.setProperty('--primary-bg', '#8c43ff');
     document.documentElement.style.setProperty('--color', '#333');
@@ -55,7 +59,7 @@ themeToggleCheckbox.addEventListener('click', () => {
     document.documentElement.style.setProperty('--toggleslider', '#fff');
     document.documentElement.style.setProperty('--roundcolor', '#fff');
     document.documentElement.style.setProperty('--svgcolor', '#111');
-    document.documentElement.style.setProperty('--border-color', '#ddd'); /* Màu viền cho light theme */
+    document.documentElement.style.setProperty('--border-color', '#ddd');
   }
 });
 themeToggleCheckbox.addEventListener('change', function() {

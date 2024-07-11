@@ -357,22 +357,27 @@ section {
 }
 
 .section.one {
- background-color: var(--bg-color);
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; 
-  padding: 50px; 
-  box-sizing: border-box; 
-   display: flex;
+  height: 100vh; /* Chiều cao bằng cửa sổ hiện tại */
+  padding: 50px; /* Khoảng cách từ nội dung đến viền */
+  box-sizing: border-box; /* Hộp đóng gói để padding không làm thay đổi kích thước */
+  display: flex;
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */
   text-align: center;
-    flex-grow: 1; /* Cho các section này mở rộng ít hơn section one */
+  flex-grow: 1; /* Cho phép các section này mở rộng ít hơn section one */
+  border-left: none; /* Loại bỏ border bên trái */
+  border-right: none; /* Loại bỏ border bên phải */
+
+  /* Mở rộng những gì bạn cần thêm */
+}
 
 @media (max-width: 800px) {
   .section.one {
-    padding: 15px; /* Giảm padding để nội dung không bị cắt mất */
+    padding: 15px; /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
   }
 }
 .section.two {

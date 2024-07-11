@@ -327,7 +327,7 @@ section {
   box-sizing: border-box; 
 }
 .section.three {
-  background-image: url('image/back2.png');
+  background-color: rgb(255, 255, 255);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

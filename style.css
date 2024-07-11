@@ -486,6 +486,12 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
   background-color: var(--toggleslider-dark); /* Màu slider cho chế độ Dark */
   transform: translateX(-4px); /* Đẩy slider sang vị trí bên trái */
 }
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 .two .container {
   max-width: 800px;
   margin: 0 auto;

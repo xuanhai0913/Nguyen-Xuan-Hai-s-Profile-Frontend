@@ -13,6 +13,50 @@
             padding: 0;
             background: #f5f5f5;
         }
+         header {
+            background-color: #fff; /* Màu nền của header */
+            color: #333; /* Màu chữ của header */
+            padding: 10px 0; /* Khoảng cách bên trong header */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng header */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+        }
+
+        .header .logo a {
+            color: #333; /* Màu chữ cho logo */
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .header .nav-toggle {
+            display: none; /* Ẩn nút toggle trong header */
+        }
+
+        .nav__list {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__item {
+            margin-right: 20px;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav__link:hover {
+            color: #555; /* Màu chữ khi hover */
+        }
 
         .social-icons ul {
             display: flex;
@@ -124,6 +168,7 @@
         .social-icons ul li:hover:nth-child(4) a:after {
             background: #e46880;
         }
+        
 
         section.one {
             display: flex;

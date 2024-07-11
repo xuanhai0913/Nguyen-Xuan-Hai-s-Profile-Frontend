@@ -426,8 +426,7 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.theme-toggle-btn::before {
-  content: "";
+.toggle-slider {
   position: absolute;
   height: 26px;
   width: 26px;
@@ -436,20 +435,16 @@ section {
   background-color: var(--toggleslider);
   border-radius: 50%;
   transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .theme-toggle-btn {
-  background-color: var(--primary-bg); /* Màu của toggle button khi bật */
-}
-
-input[type="checkbox"]:checked + .theme-toggle-btn::before {
+input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
   transform: translateX(26px);
 }
-
 
 /* Animation */
 @keyframes toggleTheme {
@@ -464,23 +459,20 @@ input[type="checkbox"]:checked + .theme-toggle-btn::before {
   }
 }
 
-.theme-toggle-btn::before {
-  animation: toggleTheme 0.3s linear;
-}
-@keyframes toggleAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.theme-toggle-btn.checked .toggle-slider {
+  animation: toggleSliderAnimation 0.3s linear;
 }
 
-.toggle-animation::before {
-  animation: toggleAnimation 0.3s linear;
+@keyframes toggleSliderAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(26px);
+  }
 }
 
 

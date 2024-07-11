@@ -357,17 +357,19 @@ section {
 }
 
 .section.one {
-    background-color: var(--bg-color);
-  min-height: 60vh; /* Điều chỉnh chiều cao tối thiểu */
-  display: flex;
+ background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  padding: 50px; 
+  box-sizing: border-box; 
+   display: flex;
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */
-  box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
-border-left: 500px solid var(--bg-color); /* Thêm viền bên trái */
-  border-right: 500px solid var(--bg-color); /* Thêm viền bên phải */
-  padding: 70px; /* Điều chỉnh padding theo cần thiết */
-}
+    flex-grow: 1; /* Cho các section này mở rộng ít hơn section one */
+
 @media (max-width: 800px) {
   .section.one {
     padding: 15px; /* Giảm padding để nội dung không bị cắt mất */

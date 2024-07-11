@@ -17,5 +17,11 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
   });
 });
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const body = document.body;
+
+themeToggleBtn.addEventListener('click', () => {
+  body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+});
 
 

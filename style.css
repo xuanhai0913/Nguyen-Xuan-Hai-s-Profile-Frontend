@@ -446,16 +446,56 @@ section {
   transition: transform 0.3s ease;
 }
 
+.theme-toggle-btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: var(--togglebg);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--toggleslider);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .toggle-btn {
-  background-color: #8c43ff; /* Màu của toggle button khi bật */
+input[type="checkbox"]:checked + .theme-toggle-btn {
+  background-color: var(--primary-bg); /* Màu của toggle button khi bật */
 }
 
-input[type="checkbox"]:checked + .toggle-btn::before {
+input[type="checkbox"]:checked + .theme-toggle-btn::before {
   transform: translateX(26px);
+}
+
+/* Animation */
+@keyframes toggleTheme {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.theme-toggle-btn::before {
+  animation: toggleTheme 0.3s linear;
 }
 
 

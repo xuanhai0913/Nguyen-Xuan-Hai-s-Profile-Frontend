@@ -11,7 +11,7 @@
 
 /* Define variables for dark theme */
 :root {
-  --bg-color-dark: #000000;
+  --bg-color-dark: #333333;
   --primary-bg-dark: #333;
   --color-dark: #e9dcdc;
   --togglebg-dark: #333;

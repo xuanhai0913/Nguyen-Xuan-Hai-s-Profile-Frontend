@@ -2,7 +2,12 @@ window.onscroll = function () {
   scrollFunction();
 };
 function scrollFunction() {
-  document.getElementById("navbar").style.background = "#fff";
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 100) { // Thay 100 bằng khoảng cách cụ thể bạn muốn
+    navbar.style.background = "#fff"; // Áp dụng màu nền khi cuộn xuống
+  } else {
+    navbar.style.background = "transparent"; // Hoặc áp dụng màu nền trong suốt khi lên đầu trang
+  }
 }
 
 const navToggle = document.querySelector(".nav-toggle");

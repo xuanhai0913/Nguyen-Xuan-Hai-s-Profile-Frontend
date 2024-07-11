@@ -358,6 +358,7 @@ section {
   justify-content: center; /* Căn giữa theo chiều ngang */
   box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
+    flex-grow: 2; /* Cho section này mở rộng lớn hơn các section khác */
 }
 @media (max-width: 800px) {
   .section.one {
@@ -377,6 +378,8 @@ section {
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */
   text-align: center;
+    flex-grow: 1; /* Cho các section này mở rộng ít hơn section one */
+
 }
 .section.three {
   background-color: var(--bg-color);

@@ -31,8 +31,8 @@ navLinks.forEach((link) => {
   });
 });
 
-themeToggleCheckbox.addEventListener('change', () => {
-  const currentTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
+themeToggleCheckbox.addEventListener('click', () => {
+  const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
   body.dataset.theme = currentTheme;
 
   if (currentTheme === 'dark') {

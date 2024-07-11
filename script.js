@@ -50,7 +50,7 @@ themeToggleBtn.addEventListener('click', () => {
   body.dataset.theme = currentTheme;
 
   if (currentTheme === 'dark') {
-    document.documentElement.style.setProperty('--bg-color', '#000000');
+    document.documentElement.style.setProperty('--bg-color', '#333333');
     document.documentElement.style.setProperty('--primary-bg', '#333');
     document.documentElement.style.setProperty('--color', '#e9dcdc');
     document.documentElement.style.setProperty('--togglebg', '#333');

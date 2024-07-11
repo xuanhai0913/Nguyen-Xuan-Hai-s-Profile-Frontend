@@ -71,7 +71,7 @@ body {
   align-items: center; /* Căn giữa các phần tử theo chiều dọc */
   z-index: 10;
   position: fixed;
- background-color: #333;
+  background-color: var(--bg-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho thanh đầu trang */
   padding: 0 2rem; /* Tăng padding để các nút không bị dính sát mép */
     transition: background-color 0.3s ease; /* Smooth transition for background color */

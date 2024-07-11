@@ -7,6 +7,7 @@
   --toggleslider-light: #fff;
   --roundcolor-light: #fff;
   --svgcolor-light: #111;
+    --border-color-light: #ffffff; /* Màu của border trong chủ đề sáng */
 }
 
 /* Define variables for dark theme */
@@ -18,6 +19,8 @@
   --toggleslider-dark: #e9dcdc;
   --roundcolor-dark: #333;
   --svgcolor-dark: #fff;
+    --border-color-dark: #666666; /* Màu của border trong chủ đề tối */
+
 }
 
 :root {
@@ -55,6 +58,8 @@ body {
   --toggleslider: var(--toggleslider-light);
   --roundcolor: var(--roundcolor-light);
   --svgcolor: var(--svgcolor-light);
+    --border-color: var(--border-color-light); /* Sử dụng màu border của chủ đề sáng */
+
 }
 
 /* Apply dark theme styles */
@@ -66,6 +71,8 @@ body {
   --toggleslider: var(--toggleslider-dark);
   --roundcolor: var(--roundcolor-dark);
   --svgcolor: var(--svgcolor-dark);
+    --border-color: var(--border-color-dark); /* Sử dụng màu border của chủ đề tối */
+
 }
 
 .nav {
@@ -351,7 +358,6 @@ section {
 
 .section.one {
   min-height: 60vh; /* Điều chỉnh chiều cao tối thiểu */
-  padding: 20px; /* Thêm padding để nội dung không dính sát mép */
   display: flex;
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */

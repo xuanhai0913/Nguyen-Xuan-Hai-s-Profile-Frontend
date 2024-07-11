@@ -393,7 +393,7 @@ section {
 }
 
 .section.one::after {
-  right: -300px; /* Khoảng cách từ hình ảnh bên phải */
+  right: -280px; /* Khoảng cách từ hình ảnh bên phải */
 }
 
 @media (max-width: 800px) {

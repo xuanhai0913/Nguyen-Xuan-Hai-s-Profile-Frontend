@@ -411,43 +411,47 @@ section {
 
 .toggle-label {
   position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
 .toggle-btn {
-  position: relative;
-  width: 80px;
-  height: 40px;
-  background-color: var(--togglebg);
-  border: none;
-  border-radius: 20px;
+  position: absolute;
   cursor: pointer;
-  outline: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
 .toggle-btn::before {
-  content: '';
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 34px;
-  height: 34px;
-  background-color: var(--toggleslider);
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 input[type="checkbox"] {
-  visibility: hidden;
+  display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-btn {
+  background-color: #8c43ff; /* Màu của toggle button khi bật */
 }
 
 input[type="checkbox"]:checked + .toggle-btn::before {
-  transform: translateX(40px);
+  transform: translateX(26px);
 }
 
-[data-theme="dark"] .toggle-btn::before {
-  transform: translateX(40px);
-}
 
 .section.three {
   background-color: var(--bg-color);

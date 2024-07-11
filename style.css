@@ -419,17 +419,23 @@ section {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 100px;
+  height: 40px;
   background-color: var(--togglebg);
+  border: 2px solid var(--border-color); /* Viền cho nút */
   border-radius: 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền và viền */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .toggle-slider {
   position: absolute;
-  height: 26px;
-  width: 26px;
+  height: 32px;
+  width: 32px;
   left: 4px;
   bottom: 4px;
   background-color: var(--toggleslider);
@@ -438,17 +444,35 @@ section {
   transform: translateX(0);
 }
 
+.toggle-description {
+  font-size: 14px;
+  color: var(--color);
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
-  transform: translateX(26px);
+input[type="checkbox"]:checked + .theme-toggle-btn {
+  background-color: var(--primary-bg);
+  border-color: var(--border-color); /* Đổi màu viền khi toggle */
 }
 
-[data-theme="dark"] .theme-toggle-btn .toggle-slider {
-  transform: translateX(26px);
+input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
+  transform: translateX(64px); /* Điều chỉnh vị trí khi toggle */
 }
+
+[data-theme="dark"] .toggle-description {
+  color: var(--color-dark); /* Màu cho mô tả dark */
+}
+
+[data-theme="light"] .toggle-description {
+  color: var(--color-light); /* Màu cho mô tả light */
+}
+
 
 /* Animation */
 @keyframes toggleTheme {

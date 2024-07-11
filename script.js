@@ -62,4 +62,15 @@ themeToggleBtn.addEventListener('click', () => {
 
   }
 });
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+themeToggleBtn.addEventListener('click', () => {
+  checkbox.checked = !checkbox.checked;
+  if (checkbox.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+});
 

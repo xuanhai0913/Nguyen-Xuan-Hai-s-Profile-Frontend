@@ -357,14 +357,12 @@ section {
   justify-content: center; /* Căn giữa theo chiều ngang */
   box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
-    flex-grow: 2; /* Cho section này mở rộng lớn hơn các section khác */
-  background-color: var(--bg-color); /* Sử dụng màu nền của section */
-  border: 2px solid var(--border-color); /* Sử dụng màu viền đã định nghĩa */
-  padding: 20px; /* Điều chỉnh padding theo cần thiết */
+    border-left: 2px solid var(--border-color); /* Thêm viền bên trái */
+  border-right: 2px solid var(--border-color); /* Thêm viền bên phải */
+  padding: 50px; /* Điều chỉnh padding theo cần thiết */
 }
 @media (max-width: 800px) {
   .section.one {
-    min-height: 50vh; /* Điều chỉnh chiều cao tối thiểu cho thiết bị nhỏ */
     padding: 15px; /* Giảm padding để nội dung không bị cắt mất */
   }
 }

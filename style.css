@@ -407,6 +407,12 @@ section {
   align-items: center;
   height: 100vh;
   background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px; 
+  box-sizing: border-box; 
+  text-align: center;
 }
 
 .toggle-label {

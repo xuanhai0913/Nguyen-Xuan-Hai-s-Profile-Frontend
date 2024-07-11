@@ -3,6 +3,8 @@ const body = document.body;
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav__link");
 const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+const checkbox = document.getElementById('theme-toggle-checkbox');
 
 // Sự kiện cuộn trang
 window.onscroll = function () {
@@ -54,4 +56,15 @@ themeToggleCheckbox.addEventListener('click', () => {
     document.documentElement.style.setProperty('--svgcolor', '#111');
     document.documentElement.style.setProperty('--border-color', '#ddd'); /* Màu viền cho light theme */
   }
+});
+themeToggleBtn.addEventListener('click', () => {
+  checkbox.checked = !checkbox.checked;
+  
+  // Add animation class
+  themeToggleBtn.classList.add('toggle-animation');
+  
+  // Remove animation class after animation ends
+  themeToggleBtn.addEventListener('animationend', () => {
+    themeToggleBtn.classList.remove('toggle-animation');
+  }, { once: true });
 });

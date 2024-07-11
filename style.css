@@ -462,16 +462,20 @@ input[type="checkbox"]:checked + .theme-toggle-btn {
 }
 
 input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
-  transform: translateX(64px); /* Điều chỉnh vị trí khi toggle */
+  transform: translateX(26px); /* Điều chỉnh vị trí khi toggle */
 }
 
 [data-theme="dark"] .toggle-description {
   color: var(--color-dark); /* Màu cho mô tả dark */
+    transform: translateX(26px);
+
 }
 
 [data-theme="light"] .toggle-description {
   color: var(--color-light); /* Màu cho mô tả light */
 }
+  transform: translateX(26px);
+
 
 
 /* Animation */

@@ -359,8 +359,8 @@ section {
   box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
     flex-grow: 2; /* Cho section này mở rộng lớn hơn các section khác */
-  border-left: 8px solid var(--primary-bg); /* Viền bên trái */
-  border-right: 8px solid var(--primary-bg); /* Viền bên phải */
+  border-left: 8px solid var(--bg-color); /* Viền bên trái */
+  border-right: 8px solid var(--bg-color); /* Viền bên phải */
 }
 @media (max-width: 800px) {
   .section.one {

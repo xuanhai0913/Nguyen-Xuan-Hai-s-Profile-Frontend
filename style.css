@@ -402,19 +402,47 @@ section {
   }
 }
 .section.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: var(--bg-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; 
-  padding: 50px; 
-  box-sizing: border-box; 
-   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  text-align: center;
-    flex-grow: 1; /* Cho các section này mở rộng ít hơn section one */
+}
 
+.toggle-btn {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: var(--togglebg);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background-color: var(--toggleslider);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + .toggle-btn::before {
+  transform: translateX(40px);
+}
+
+[data-theme="dark"] .toggle-btn::before {
+  transform: translateX(40px);
 }
 .section.three {
   background-color: var(--bg-color);

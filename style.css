@@ -318,7 +318,7 @@ section {
   }
 }
 .section.two {
-  background-image: url('image/back1.png');
+  background-color: rgb(255, 255, 255);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

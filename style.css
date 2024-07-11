@@ -446,6 +446,10 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
   transform: translateX(26px);
 }
 
+[data-theme="dark"] .theme-toggle-btn .toggle-slider {
+  transform: translateX(26px);
+}
+
 /* Animation */
 @keyframes toggleTheme {
   0% {

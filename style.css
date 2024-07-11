@@ -409,6 +409,10 @@ section {
   background-color: var(--bg-color);
 }
 
+.toggle-label {
+  position: relative;
+}
+
 .toggle-btn {
   position: relative;
   width: 80px;
@@ -444,6 +448,7 @@ input[type="checkbox"]:checked + .toggle-btn::before {
 [data-theme="dark"] .toggle-btn::before {
   transform: translateX(40px);
 }
+
 .section.three {
   background-color: var(--bg-color);
   background-size: cover;

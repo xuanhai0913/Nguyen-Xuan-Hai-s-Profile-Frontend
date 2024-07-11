@@ -364,8 +364,8 @@ section {
   justify-content: center; /* Căn giữa theo chiều ngang */
   box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
-    border-left: 2px solid var(--bg-color); /* Thêm viền bên trái */
-  border-right: 2px solid var(--bg-color); /* Thêm viền bên phải */
+    border-left: 20px solid var(--bg-color); /* Thêm viền bên trái */
+  border-right: 20px solid var(--bg-color); /* Thêm viền bên phải */
   padding: 50px; /* Điều chỉnh padding theo cần thiết */
 }
 @media (max-width: 800px) {

@@ -152,7 +152,7 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  color: rgb(22, 8, 8);
+    color: var(--color);
   text-transform: uppercase;
   width: 25rem;
   font-family: "Raleway", sans-serif;
@@ -165,7 +165,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #111;
+    color: var(--color);
 }
 
 /* Responsive adjustments */

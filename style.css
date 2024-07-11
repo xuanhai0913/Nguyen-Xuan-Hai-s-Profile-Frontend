@@ -478,3 +478,37 @@ footer .footer__container {
   margin: 10px;
   text-align: center;
 }
+.header {
+  background-color: var(--bg-color); /* Chọn màu nền cho header */
+  color: var(--color); /* Chọn màu chữ cho header */
+  padding: 1rem; /* Thêm padding để tạo khoảng cách xung quanh nội dung trong header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền mượt mà */
+}
+
+.header__logo {
+  color: var(--color); /* Màu chữ cho logo */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__toggle {
+  display: none; /* Ẩn nút toggle trong header */
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0 2rem; /* Thêm padding trái phải cho header khi ở chế độ responsive */
+  }
+
+  .header__toggle {
+    display: block; /* Hiển thị nút toggle trong chế độ responsive */
+    cursor: pointer;
+  }
+}

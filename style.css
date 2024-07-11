@@ -394,6 +394,16 @@ section {
   justify-content: center; /* Căn giữa theo chiều ngang */
   text-align: center;
 }
+@media (max-width: 800px) {
+  .section.one {
+    padding: 15px;
+  }
+
+  .section.two,
+  .section.three {
+    padding: 15px;
+  }
+}
 
 .skill3 .skills-list {
   display: flex;

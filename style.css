@@ -450,22 +450,6 @@ input[type="checkbox"]:checked + .theme-toggle-btn::before {
   transform: translateX(26px);
 }
 
-/* Animation */
-@keyframes toggleTheme {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.theme-toggle-btn::before {
-  animation: toggleTheme 0.3s linear;
-}
 
 /* Animation */
 @keyframes toggleTheme {

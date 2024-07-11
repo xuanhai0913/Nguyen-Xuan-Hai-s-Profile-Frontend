@@ -5,6 +5,7 @@ const navLinks = document.querySelectorAll(".nav__link");
 const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
 const themeToggleBtn = document.querySelector('.theme-toggle-btn');
 const checkbox = document.getElementById('theme-toggle-checkbox');
+const toggleSlider = document.querySelector('.toggle-slider');
 
 // Sự kiện cuộn trang
 window.onscroll = function () {
@@ -57,7 +58,12 @@ themeToggleCheckbox.addEventListener('click', () => {
     document.documentElement.style.setProperty('--border-color', '#ddd'); /* Màu viền cho light theme */
   }
 });
-themeToggleBtn.addEventListener('click', () => {
-  checkbox.checked = !checkbox.checked;
-  themeToggleBtn.classList.toggle('checked');
+themeToggleCheckbox.addEventListener('change', function() {
+  if (this.checked) {
+    themeToggleBtn.setAttribute('data-theme', 'light');
+    toggleSlider.style.transform = 'translateX(0)';
+  } else {
+    themeToggleBtn.setAttribute('data-theme', 'dark');
+    toggleSlider.style.transform = 'translateX(64px)';
+  }
 });

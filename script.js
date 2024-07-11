@@ -60,10 +60,8 @@ themeToggleCheckbox.addEventListener('click', () => {
 });
 themeToggleCheckbox.addEventListener('change', function() {
   if (this.checked) {
-    themeToggleBtn.setAttribute('data-theme', 'light');
     toggleSlider.style.transform = 'translateX(0)';
   } else {
-    themeToggleBtn.setAttribute('data-theme', 'dark');
     toggleSlider.style.transform = 'translateX(64px)';
   }
 });

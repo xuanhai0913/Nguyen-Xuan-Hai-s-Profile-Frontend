@@ -88,12 +88,12 @@ body {
 
 /* Màu nền khi cuộn trang */
 .navbar-scrolled {
-  background-color: #fff; /* Thay đổi thành màu nền mong muốn khi cuộn trang */
+  background-color: var(--bg-color);
 }
 
 /* Màu nền khi lên đầu trang */
 .navbar-transparent {
-  background-color: transparent; /* Hoặc áp dụng màu nền trong suốt khi lên đầu trang */
+  background-color: var(--bg-color);
 }
 
 .nav__list {

@@ -440,7 +440,7 @@ section {
   background-color: var(--toggleslider-light); /* Màu slider cho chế độ Light */
   border-radius: 50%;
   transition: transform 0.3s ease;
-  transform: translateX(-4px); /* Đẩy slider về vị trí bên trái */
+  transform: translateX(68px); /* Đẩy slider về vị trí bên phải */
 }
 
 .toggle-slider {
@@ -479,15 +479,13 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
 [data-theme="dark"] .theme-toggle-btn {
   background-color: var(--togglebg-dark); /* Màu nền cho chế độ Dark */
   border-color: var(--border-color-dark); /* Viền cho chế độ Dark */
-  justify-content: flex-end; /* Căn phần tử con sang phải */
+  justify-content: flex-start; /* Căn phần tử con sang bên trái */
 }
 
 [data-theme="dark"] .theme-toggle-btn .toggle-slider {
   background-color: var(--toggleslider-dark); /* Màu slider cho chế độ Dark */
-  transform: translateX(68px); /* Đẩy slider sang vị trí bên phải */
+  transform: translateX(-4px); /* Đẩy slider sang vị trí bên trái */
 }
-
-
 
 /* Animation */
 @keyframes toggleTheme {

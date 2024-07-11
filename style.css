@@ -371,8 +371,29 @@ section {
   flex-grow: 1; /* Cho phép các section này mở rộng ít hơn section one */
   border-left: none; /* Loại bỏ border bên trái */
   border-right: none; /* Loại bỏ border bên phải */
+  position: relative; /* Để các phần tử pseudo có thể áp dụng vị trí tuyệt đối */
 
   /* Mở rộng những gì bạn cần thêm */
+}
+.section.one::before,
+.section.one::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: -50px;
+  width: 500px; /* Độ rộng của hình ảnh */
+  background-image: url('image/back2.png'); /* Đường dẫn đến hình ảnh */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.section.one::before {
+  left: -300px; /* Khoảng cách từ hình ảnh bên trái */
+}
+
+.section.one::after {
+  right: -300px; /* Khoảng cách từ hình ảnh bên phải */
 }
 
 @media (max-width: 800px) {

@@ -63,7 +63,7 @@ themeToggleBtn.addEventListener('click', () => {
   }
 });
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
-const checkbox = document.querySelector('input[type="checkbox"]');
+const checkbox = document.getElementById('theme-toggle-checkbox');
 
 themeToggleBtn.addEventListener('click', () => {
   checkbox.checked = !checkbox.checked;
@@ -73,4 +73,5 @@ themeToggleBtn.addEventListener('click', () => {
     document.documentElement.setAttribute('data-theme', 'light');
   }
 });
+
 

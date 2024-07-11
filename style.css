@@ -359,6 +359,8 @@ section {
   box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
     flex-grow: 2; /* Cho section này mở rộng lớn hơn các section khác */
+  border-left: 8px solid var(--primary-bg); /* Viền bên trái */
+  border-right: 8px solid var(--primary-bg); /* Viền bên phải */
 }
 @media (max-width: 800px) {
   .section.one {
@@ -393,16 +395,6 @@ section {
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: center; /* Căn giữa theo chiều ngang */
   text-align: center;
-}
-@media (max-width: 800px) {
-  .section.one {
-    padding: 15px;
-  }
-
-  .section.two,
-  .section.three {
-    padding: 15px;
-  }
 }
 
 .skill3 .skills-list {

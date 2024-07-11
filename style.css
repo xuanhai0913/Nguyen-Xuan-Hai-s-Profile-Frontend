@@ -303,13 +303,19 @@ section {
 
 .section.one {
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  min-height: 60vh; /* Điều chỉnh chiều cao tối thiểu */
+  padding: 20px; /* Thêm padding để nội dung không dính sát mép */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  box-sizing: border-box; /* Đảm bảo padding không làm ảnh hưởng đến kích thước */
   text-align: center;
+}
+@media (max-width: 800px) {
+  .section.one {
+    min-height: 50vh; /* Điều chỉnh chiều cao tối thiểu cho thiết bị nhỏ */
+    padding: 15px; /* Giảm padding để nội dung không bị cắt mất */
+  }
 }
 .section.two {
   background-image: url('image/back1.png');

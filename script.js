@@ -59,12 +59,5 @@ themeToggleCheckbox.addEventListener('click', () => {
 });
 themeToggleBtn.addEventListener('click', () => {
   checkbox.checked = !checkbox.checked;
-  
-  // Add animation class
-  themeToggleBtn.classList.add('toggle-animation');
-  
-  // Remove animation class after animation ends
-  themeToggleBtn.addEventListener('animationend', () => {
-    themeToggleBtn.classList.remove('toggle-animation');
-  }, { once: true });
+  themeToggleBtn.classList.toggle('checked');
 });

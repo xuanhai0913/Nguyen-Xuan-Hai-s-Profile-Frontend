@@ -479,7 +479,7 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
 [data-theme="dark"] .theme-toggle-btn {
   background-color: var(--togglebg-dark); /* Màu nền cho chế độ Dark */
   border-color: var(--border-color-dark); /* Viền cho chế độ Dark */
-  justify-content: flex-start; /* Căn phần tử con sang bên trái */
+  justify-content: flex-end; /* Căn phần tử con sang bên trái */
 }
 
 [data-theme="dark"] .theme-toggle-btn .toggle-slider {

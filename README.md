@@ -26,9 +26,3 @@ The homepage features a personalized card with a profile picture, name, title, a
 
 A dedicated section showcasing my technical skills with relevant icons, including C++, JavaScript, Python, HTML, CSS, Node.js, React, GitHub, Git, and VS Code.
 
-### Projects Section:
-
-A section to display my projects, complete with project descriptions, images, and links to live demos or repositories.
-### Contact Section:
-
-A contact form for visitors to reach out to me, along with additional social media links for broader connectivity.

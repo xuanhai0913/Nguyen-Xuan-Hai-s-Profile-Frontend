@@ -6,6 +6,8 @@
 This project is a personal portfolio website for showcasing my skills, projects, and contact information. 
 
 It is designed to provide a professional online presence and serve as a comprehensive introduction to potential employers, clients, and collaborators.
+<img src="./image/profile.png" />
+
 ## Key Features:
 
 ### Responsive Design:

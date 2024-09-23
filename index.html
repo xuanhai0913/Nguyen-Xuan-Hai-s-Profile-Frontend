@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <style>
+        async function playVideoFromCamera() {
+    try {
+        const constraints = {'video': true, 'audio': true};
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        const videoElement = document.querySelector('video#localVideo');
+        videoElement.srcObject = stream;
+    } catch(error) {
+        console.error('Error opening video camera.', error);
+    }
+}
         body {
             margin: 0;
             padding: 0;
@@ -440,6 +450,7 @@
         <label for="theme-toggle-checkbox" class="theme-toggle-btn">
             <span class="toggle-description">Light</span>
             <div class="toggle-slider"></div>
+            
         </label>
     </div>
 </section>

@@ -686,13 +686,3 @@ footer .footer__container {
   margin: 10px;
   text-align: center;
 }
-{
-    "video": {
-        "width": {
-            "exact": 1024
-        },
-        "height": {
-            "exact": 768
-        }
-    }
-}

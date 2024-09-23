@@ -7,7 +7,8 @@ const themeToggleBtn = document.querySelector('.theme-toggle-btn');
 const checkbox = document.getElementById('theme-toggle-checkbox');
 const toggleSlider = document.querySelector('.toggle-slider');
 const toggleDescription = document.querySelector('.toggle-description');
-
+const localVideo = document.getElementById('localVideo');
+localVideo.srcObject = localStream;
 // Sự kiện cuộn trang
 window.onscroll = function () {
   scrollFunction();

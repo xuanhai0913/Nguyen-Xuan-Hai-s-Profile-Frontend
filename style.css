@@ -622,112 +622,70 @@ input[type="checkbox"]:checked + .theme-toggle-btn .toggle-slider {
 }
 
 footer {
-  background-color: var(--primary-bg);
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
-}
-
-.footer__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer__column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer__logo {
-  max-width: 80px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.footer__link {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer__link:hover {
-  text-decoration: underline;
-}
-
-.footer__pdf {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: white;
-}
-
-.footer__pdf img {
-  max-width: 30px;
-  height: auto;
-}
-
-footer .footer__container {
-  flex-direction: row;
-}
-
-.footer__column {
-  margin: 10px;
-  text-align: center;
-}
-footer {
-    background-color: #3b5998;
+    background-color: #3b5998; /* Replace with var(--primary-bg) if needed */
     color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__column {
+    flex: 1;
+    max-width: 25%; /* Adjust based on number of columns */
+    text-align: center;
+    margin: 10px;
+}
+
+.footer__logo {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer__link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__pdf {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer__pdf img {
+    max-width: 30px;
+    height: auto;
 }
 
 .footer-content {
-    text-align: left;
     flex: 1;
-    max-width: 70%;
-    margin-right: 20px;
-}
-
-.footer-content h2 {
-    margin-bottom: 10px;
-}
-
-.footer-content a {
-    color: #dfe3ee;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
+    text-align: left;
 }
 
 .footer-download {
     text-align: right;
 }
 
-.footer-download p {
-    margin-bottom: 10px;
-}
-
 .footer-download img {
-    width: 160px;
-    height: 160px;
+    width: 30px; /* Adjust size as needed */
+    height: auto;
     border-radius: 50%;
 }
+

@@ -7,9 +7,7 @@ const themeToggleBtn = document.querySelector('.theme-toggle-btn');
 const checkbox = document.getElementById('theme-toggle-checkbox');
 const toggleSlider = document.querySelector('.toggle-slider');
 const toggleDescription = document.querySelector('.toggle-description');
-const localVideo = document.getElementById('localVideo');
-localVideo.srcObject = localStream;
-// Sự kiện cuộn trang
+
 window.onscroll = function () {
   scrollFunction();
 };
@@ -70,54 +68,3 @@ themeToggleCheckbox.addEventListener('change', function() {
     toggleSlider.style.transform = 'translateX(64px)';
   }
 });
-async function getConnectedDevices(type) {
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    return devices.filter(device => device.kind === type);
-}
-
-function updateCameraList(cameras) {
-    const listElement = document.querySelector('select#availableCameras');
-    listElement.innerHTML = '';
-    cameras.forEach(camera => {
-        const cameraOption = document.createElement('option');
-        cameraOption.label = camera.label;
-        cameraOption.value = camera.deviceId;
-        listElement.add(cameraOption);
-    });
-}
-
-getConnectedDevices('videoinput').then(cameras => updateCameraList(cameras));
-
-navigator.mediaDevices.ondevicechange = async () => {
-    const newCameraList = await getConnectedDevices('videoinput');
-    updateCameraList(newCameraList);
-};
-
-const iceConfiguration = {
-    iceServers: [
-        {
-            urls: 'turn:my-turn-server.mycompany.com:19403',
-            username: 'optional-username',
-            credential: 'auth-token'
-        }
-    ]
-};
-
-async function setupPeerConnection() {
-    const localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-    const peerConnection = new RTCPeerConnection(iceConfiguration);
-    localStream.getTracks().forEach(track => {
-        peerConnection.addTrack(track, localStream);
-    });
-
-    const localVideo = document.getElementById('localVideo');
-    localVideo.srcObject = localStream; // Thiết lập video local
-
-    const remoteVideo = document.querySelector('#remoteVideo');
-    peerConnection.addEventListener('track', async (event) => {
-        const [remoteStream] = event.streams;
-        remoteVideo.srcObject = remoteStream;
-    });
-}
-
-setupPeerConnection();

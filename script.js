@@ -124,3 +124,25 @@ signalingChannel.addEventListener('message', message => {
 
 // Send an asynchronous message to the remote client
 signalingChannel.send('Hello!');
+const localStream = await getUserMedia({video: true, audio: true});
+const peerConnection = new RTCPeerConnection(iceConfig);
+localStream.getTracks().forEach(track => {
+    peerConnection.addTrack(track, localStream);
+});
+const remoteVideo = document.querySelector('#remoteVideo');
+
+peerConnection.addEventListener('track', async (event) => {
+    const [remoteStream] = event.streams;
+    remoteVideo.srcObject = remoteStream;
+});
+const iceConfiguration = {
+    iceServers: [
+        {
+            urls: 'turn:my-turn-server.mycompany.com:19403',
+            username: 'optional-username',
+            credential: 'auth-token'
+        }
+    ]
+}
+
+const peerConnection = new RTCPeerConnection(iceConfiguration);

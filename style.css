@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #f5f5f5;
+  font-size: 100%;
 }
 
 .social-icons ul {
@@ -666,7 +667,7 @@ section {
   bottom: -50px;
   width: 500px; /* Độ rộng của hình ảnh */
   background-image: url('image/back2.png'); /* Đường dẫn đến hình ảnh */
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   z-index: -1;
 }
@@ -690,8 +691,11 @@ section {
   align-items: center;
   height: 100vh;
   background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px; 
   box-sizing: border-box; 
-  text-align: center;
 }
 
 .switch {
@@ -891,75 +895,6 @@ section {
     transform: translateY(0);
   }
 }
-
-footer {
-    background-color: #3b5998; /* Replace with var(--primary-bg) if needed */
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.footer__column {
-    flex: 1;
-    max-width: 25%; /* Adjust based on number of columns */
-    text-align: center;
-    margin: 10px;
-}
-
-.footer__logo {
-    max-width: 80px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.footer__link {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footer__link:hover {
-    text-decoration: underline;
-}
-
-.footer__pdf {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-.footer__pdf img {
-    max-width: 30px;
-    height: auto;
-}
-
-.footer-content {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-download {
-    text-align: right;
-}
-
-.footer-download img {
-    width: 30px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%;
-}
-
 /* Button Sáng và Tối */
 .switch {
   display: block;
@@ -1097,5 +1032,68 @@ footer {
 
   80% {
     opacity: 0;
+  }
+}
+/* FOOTER */
+footer {
+  background-color: #282c34; /* Màu nền footer */
+  color: white; /* Màu chữ */
+  padding: 20px 0; /* Padding trên và dưới */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.footer-content {
+  margin-bottom: 20px; /* Khoảng cách giữa các phần */
+}
+
+.footer-content h2 {
+  font-size: 2rem; /* Kích thước tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.footer-content p {
+  margin: 5px 0; /* Khoảng cách giữa các đoạn */
+}
+
+.footer-content a {
+  color: #61dafb; /* Màu của các liên kết */
+  text-decoration: none; /* Không gạch chân */
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.footer-download {
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.footer-download p {
+  margin-bottom: 10px; /* Khoảng cách dưới đoạn chữ */
+}
+
+.footer-download img {
+  width: 50px; /* Kích thước logo */
+  height: auto; /* Tự động điều chỉnh chiều cao */
+  cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+}
+
+.footer-download a {
+  display: inline-block; /* Hiển thị như khối để dễ căn giữa */
+  transition: transform 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.footer-download a:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 0; /* Giảm padding cho màn hình nhỏ */
+  }
+
+  .footer-content h2 {
+      font-size: 1.5rem; /* Giảm kích thước tiêu đề */
   }
 }

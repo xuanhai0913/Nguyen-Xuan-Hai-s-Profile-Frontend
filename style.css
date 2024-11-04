@@ -684,19 +684,7 @@ section {
     padding: 15px; /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
   }
 }
-.section.two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--bg-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 50px; 
-  box-sizing: border-box; 
-  text-align: center;
-}
+/* Section 2*/
 
 .switch {
   display: block;

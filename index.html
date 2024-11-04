@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header> 
+    <header>
         <button class="nav-toggle">
             <span class="hamburger"></span>
         </button>
@@ -25,7 +25,16 @@
             <div class="logo">
                 <a href="index.html" id="logo">
                     <h1> <i class="fas fa-code" style="font-size: 20px;"></i> NGUYEN XUAN HAI</h1>
+
                 </a>
+            </div>
+            <div class="loader">
+                <div class="loader-square"><i class="fab fa-react fa-3x"></i></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"><i class="fab fa-github fa-3x"></i></div>
             </div>
 
             <ul class="nav__list" id="navlinkitems">
@@ -33,7 +42,14 @@
                     <a href="#home-section" class="nav__link" id="home">Home</a>
                 </li>
                 <li class="nav__item">
+                    <a href="#dark-section" class="nav__link" id="Dark">Dark Mode</a>
+                </li>
+                <li class="nav__item">
                     <a href="#skills-section" class="nav__link" id="service">Skills</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#code-section" class="nav__link" id="code">Code</a> <!-- Đổi ID -->
+                </li>
             </ul>
         </nav>
     </header>
@@ -43,10 +59,14 @@
             <div class="left-content">
                 <div class="social-icons">
                     <ul>
-                        <li><a href="https://www.facebook.com/nguyenhai0913" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="https://github.com/xuanhai0913"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                        <li><a href="mailto:nxhai0913@gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.instagram.com/nguyenhai091375" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/nguyenhai0913" target="_blank"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/xuanhai0913"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="mailto:nxhai0913@gmail.com"><i class="fa fa-google-plus"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/nguyenhai091375" target="_blank"><i
+                                    class="fa fa-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -65,6 +85,7 @@
                 </ul>
                 <!-- Skills -->
                 <div class="skills">
+                    
                     <h6>Skills</h6>
                     <ul>
                         <li>C++</li>
@@ -84,10 +105,8 @@
         </div>
     </section>
 
-    <section class="section two">
+    <section class="section two" id="dark-section">
         <div class="content">
-            <h2>
-                <i class="fas fa-face-smile"></i> Dark <i class="fas fa-arrow-right"></i> Light <i class="far fa-face-smile"></i>
             </h2>
             <br>
             <label class="switch">
@@ -105,49 +124,111 @@
 
     <section class="section three skill3" id="skills-section">
         <div class="skills-list">
-          <div class="skill-item">
-            <i class="fab fa-cuttlefish fa-3x"></i>
-            <span>C++</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-js fa-3x"></i>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-python fa-3x"></i>
-            <span>Python</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-html5 fa-3x"></i>
-            <span>HTML</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-css3-alt fa-3x"></i>
-            <span>CSS</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-node fa-3x"></i>
-            <span>Node.js</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-react fa-3x"></i>
-            <span>React</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-github fa-3x"></i>
-            <span>GitHub</span>
-          </div>
-          <div class="skill-item">
-            <i class="fab fa-git fa-3x"></i>
-            <span>Git</span>
-          </div>
-          <div class="skill-item">
-            <i class="fas fa-code fa-3x"></i>
-            <span>VS Code</span>
-          </div>
+            <div class="skill-item">
+                <i class="fab fa-cuttlefish fa-3x"></i>
+                <span>C++</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js fa-3x"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-python fa-3x"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-html5 fa-3x"></i>
+                <span>HTML</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt fa-3x"></i>
+                <span>CSS</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-node fa-3x"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react fa-3x"></i>
+                <span>React</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-github fa-3x"></i>
+                <span>GitHub</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-git fa-3x"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-code fa-3x"></i>
+                <span>VS Code</span>
+            </div>
         </div>
-      </section>
-      <footer>
+    </section>
+    <section class="section four" id="code-section">
+        <div class="card1">
+            <div class="titlebar">
+                <span class="buttons">
+                    <button class="minimize">
+                        <svg x="0px" y="0px" viewBox="0 0 10.2 1">
+                            <rect x="0" y="50%" width="10.2" height="1"></rect>
+                        </svg>
+                    </button>
+                    <button class="maximize">
+                        <svg viewBox="0 0 10 10">
+                            <path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path>
+                        </svg>
+                    </button>
+                    <button class="close">
+                        <svg viewBox="0 0 10 10">
+                            <polygon
+                                points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1">
+                            </polygon>
+                        </svg>
+                    </button>
+                </span>
+            </div>
+            <div class="cppcode">
+                <pre id="pre"><code>
+        <span class="s1">#include</span> <span class="s2">&lt;iostream&gt;</span>
+        <span class="s1">#include</span> <span class="s2">&lt;cmath&gt;</span>
+        using <span class="s3">namespace</span> std<span class="sc">;</span>
+        
+        <span class="s3">int</span> <span class="s2">main()</span> <span class="curlies">{</span>
+        
+            <span class="s3">float</span> <span class="s4">a</span>, <span class="s4">b</span>, <span class="s4">c</span>;
+            <span class="s3">cout</span> <span class="s5">&lt;&lt;</span> <span class="s1">"Nhập hệ số a, b, c của phương trình bậc 2: "</span><span class="sc">;</span>
+            <span class="s3">cin</span> <span class="s5">&gt;&gt;</span> <span class="s4">a</span> <span class="s5">&gt;&gt;</span> <span class="s4">b</span> <span class="s5">&gt;&gt;</span> <span class="s4">c</span><span class="sc">;</span>
+        
+            <span class="s3">float</span> <span class="s4">delta</span> <span class="operator">=</span> <span class="s4">b</span> <span class="operator">*</span> <span class="s4">b</span> <span class="operator">-</span> <span class="s3">4</span> <span class="operator">*</span> <span class="s4">a</span> <span class="operator">*</span> <span class="s4">c</span><span class="sc">;</span>
+        
+            <span class="s3">if</span> <span class="rounds">(</span><span class="s4">delta</span> <span class="operator">&lt;</span> <span class="s3">0</span><span class="rounds">)</span> <span class="curlies">{</span>
+                <span class="s3">cout</span> <span class="s5">&lt;&lt;</span> <span class="s1">"Phương trình không có nghiệm thực."</span><span class="sc">;</span>
+            <span class="curlies">} else</span> <span class="curlies">{</span>
+                <span class="s3">if</span> <span class="rounds">(</span><span class="s4">delta</span> <span class="operator">==</span> <span class="s3">0</span><span class="rounds">)</span> <span class="curlies">{</span>
+                    <span class="s3">float</span> <span class="s4">x</span> <span class="operator">=</span> <span class="s4">-b</span> <span class="operator">/</span> <span class="s3">2</span> <span class="operator">*</span> <span class="s4">a</span><span class="sc">;</span>
+                    <span class="s3">cout</span> <span class="s5">&lt;&lt;</span> <span class="s1">"Phương trình có nghiệm kép: "</span> <span class="s5">&lt;&lt;</span> <span class="s4">x</span><span class="sc">;</span>
+                <span class="curlies">} else</span> <span class="curlies">{</span>
+                    <span class="s3">float</span> <span class="s4">x1</span> <span class="operator">=</span> <span class="s4">(-b + sqrt(delta))</span> <span class="operator">/</span> <span class="s3">2</span> <span class="operator">*</span> <span class="s4">a</span><span class="sc">;</span>
+                    <span class="s3">float</span> <span class="s4">x2</span> <span class="operator">=</span> <span class="s4">(-b - sqrt(delta))</span> <span class="operator">/</span> <span class="s3">2</span> <span class="operator">*</span> <span class="s4">a</span><span class="sc">;</span>
+                    <span class="s3">cout</span> <span class="s5">&lt;&lt;</span> <span class="s1">"Nghiệm 1: "</span> <span class="s5">&lt;&lt;</span> <span class="s4">x1</span> <span class="s5">&lt;&lt;</span> <span class="s1">", Nghiệm 2: "</span> <span class="s5">&lt;&lt;</span> <span class="s4">x2</span><span class="sc">;</span>
+                <span class="curlies">}</span>
+            <span class="curlies">}</span>
+        
+            <span class="s6">return</span> <span class="s3">0</span><span class="sc">;</span>
+        <span class="curlies">}</span>
+                </code></pre>
+            </div>
+            <div class="result-container">
+                <h3>Code Tính Phương Trình Bậc 2 </h3>
+                <p id="result">Hãy thử chạy code cùng Hải nha !!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
         <div class="footer-content">
             <h2>Liên Hệ</h2>
             <p>Email: <a href="mailto:nxhai0913@gmail.com">nxhai0913@gmail.com</a></p>
@@ -161,7 +242,6 @@
             </a>
         </div>
     </footer>
-    
 
     <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>

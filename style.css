@@ -688,14 +688,9 @@ section {
 .section.two {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center; /* Căn giữa theo chiều dọc */
   background-color: var(--bg-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 50px; 
-  box-sizing: border-box; 
+  height: 100px;
 }
 
 .switch {
@@ -705,7 +700,7 @@ section {
   height: 195px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c, inset 0 0 2px 22px black;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   perspective: 700px;
 }
 
@@ -1074,9 +1069,13 @@ footer {
 
 .footer-download img {
   width: 50px; /* Kích thước logo */
-  height: auto; /* Tự động điều chỉnh chiều cao */
+  height: 50px; /* Đảm bảo chiều cao bằng chiều rộng để có hình tròn */
+  border-radius: 50%; /* Bo tròn hình ảnh */
   cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
+  transition: transform 0.3s; /* Hiệu ứng chuyển động */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
 }
+
 
 .footer-download a {
   display: inline-block; /* Hiển thị như khối để dễ căn giữa */
@@ -1097,3 +1096,265 @@ footer {
       font-size: 1.5rem; /* Giảm kích thước tiêu đề */
   }
 }
+/* Section Four*/
+section.four{
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+.card1 {
+  width: 50%;
+  height: 50%;
+  background: #202020;
+  border: 1px solid #c042ff;
+  font-size: 14px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.titlebar {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 21px;
+  font-weight: 450;
+  background-color: #181818;
+  width: 100%;
+  text-align: right;
+}
+
+.card1 button {
+  width: 40px;
+  height: 35px;
+  margin-left: -5px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: 0.2s;
+}
+
+button svg path, 
+button svg rect, 
+button svg polygon {
+  fill: #ffffff;
+}
+
+button svg {
+  width: 10px;
+  height: 10px;
+}
+
+.close:hover {
+  background-color: #e81123;
+}
+
+.maximize:hover {
+  background-color: #c042ff2e;
+}
+
+.minimize:hover {
+  background-color: #c042ff2e;
+}
+
+#pre {
+  overflow: auto;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  color: #bafff8;
+}
+
+.curlies {
+  color: #ff0000;
+}
+
+.sc {
+  color: #e600ff;
+}
+
+.rounds {
+  color: #ffffff;
+}
+
+.operator {
+  color: #ffff00;
+}
+
+.s1 {
+  color: #22ff00;
+}
+
+.s2 {
+  color: #4281ff;
+}
+
+.s3 {
+  color: #ff4284;
+}
+
+.s4 {
+  color: #ffae00;
+}
+
+.s5 {
+  color: #ffffff;
+}
+
+.s6 {
+  color: #ffff00;
+}
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #007bff; /* Màu viền */
+    border-radius: 5px; /* Bo tròn */
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+.result-container h3 {
+    margin: 0 0 10px 0; /* Căn lề cho tiêu đề */
+}
+
+.result-container p {
+    margin: 0; /* Không có khoảng cách cho đoạn văn */
+    font-size: 1.1rem; /* Kích thước chữ cho kết quả */
+    color: #333; /* Màu chữ */
+}
+/* Animation */ 
+@keyframes square-animation {
+  0% {
+   left: 0;
+   top: 0;
+  }
+ 
+  10.5% {
+   left: 0;
+   top: 0;
+  }
+ 
+  12.5% {
+   left: 32px;
+   top: 0;
+  }
+ 
+  23% {
+   left: 32px;
+   top: 0;
+  }
+ 
+  25% {
+   left: 64px;
+   top: 0;
+  }
+ 
+  35.5% {
+   left: 64px;
+   top: 0;
+  }
+ 
+  37.5% {
+   left: 64px;
+   top: 32px;
+  }
+ 
+  48% {
+   left: 64px;
+   top: 32px;
+  }
+ 
+  50% {
+   left: 32px;
+   top: 32px;
+  }
+ 
+  60.5% {
+   left: 32px;
+   top: 32px;
+  }
+ 
+  62.5% {
+   left: 32px;
+   top: 64px;
+  }
+ 
+  73% {
+   left: 32px;
+   top: 64px;
+  }
+ 
+  75% {
+   left: 0;
+   top: 64px;
+  }
+ 
+  85.5% {
+   left: 0;
+   top: 64px;
+  }
+ 
+  87.5% {
+   left: 0;
+   top: 32px;
+  }
+ 
+  98% {
+   left: 0;
+   top: 32px;
+  }
+ 
+  100% {
+   left: 0;
+   top: 0;
+  }
+ }
+ 
+ .loader {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  transform: rotate(0deg);
+ }
+ 
+ .loader-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: square-animation 10s ease-in-out infinite both;
+ }
+ 
+ .loader-square:nth-of-type(0) {
+  animation-delay: 0s;
+ }
+ 
+ .loader-square:nth-of-type(1) {
+  animation-delay: -1.4285714286s;
+ }
+ 
+ .loader-square:nth-of-type(2) {
+  animation-delay: -2.8571428571s;
+ }
+ 
+ .loader-square:nth-of-type(3) {
+  animation-delay: -4.2857142857s;
+ }
+ 
+ .loader-square:nth-of-type(4) {
+  animation-delay: -5.7142857143s;
+ }
+ 
+ .loader-square:nth-of-type(5) {
+  animation-delay: -7.1428571429s;
+ }
+ 
+ .loader-square:nth-of-type(6) {
+  animation-delay: -8.5714285714s;
+ }
+ 
+ .loader-square:nth-of-type(7) {
+  animation-delay: -10s;
+ }

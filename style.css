@@ -1,5 +1,288 @@
-/* Define variables for light theme */
-:root {
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.social-icons ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.social-icons ul li a .fa {
+  font-size: 30px;
+  color: #262626;
+  line-height: 60px;
+  transition: .5s;
+}
+
+.social-icons ul li a {
+  display: block;
+  width: 50px;
+  height: 60px;
+  background: #7a7a7c;
+  text-align: center;
+  transform: rotate(318deg) skew(199deg) translate(0, 0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+  position: relative;
+}
+
+.social-icons ul li a:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #0a1116;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.social-icons ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #464646;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.social-icons ul li a:hover {
+  transform: skew(5deg) translate(20px, -50px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+}
+
+.social-icons ul li:hover .fa {
+  color: #fff;
+}
+
+.social-icons ul li:hover:nth-child(1) a {
+  background: #3b5998;
+}
+
+.social-icons ul li:hover:nth-child(1) a:before {
+  background: #365492;
+}
+
+.social-icons ul li:hover:nth-child(1) a:after {
+  background: #4a69ad;
+}
+
+.social-icons ul li:hover:nth-child(2) a {
+  background: #00aced;
+}
+
+.social-icons ul li:hover:nth-child(2) a:before {
+  background: #097aa5;
+}
+
+.social-icons ul li:hover:nth-child(2) a:after {
+  background: #53b9e0;
+}
+
+.social-icons ul li:hover:nth-child(3) a {
+  background: #dd4b39;
+}
+
+.social-icons ul li:hover:nth-child(3) a:before {
+  background: #b33a2b;
+}
+
+.social-icons ul li:hover:nth-child(3) a:after {
+  background: #e66a5a;
+}
+
+.social-icons ul li:hover:nth-child(4) a {
+  background: #e4405f;
+}
+
+.social-icons ul li:hover:nth-child(4) a:before {
+  background: #d81c3f;
+}
+
+.social-icons ul li:hover:nth-child(4) a:after {
+  background: #e46880;
+}
+
+
+section.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  margin: 20px;
+  background-color: #f5f5f5;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
+  width: 40rem;
+}
+
+.card .left-content,
+.card .right-content {
+  padding: 10px;
+}
+
+.card .left-content {
+  flex: 1;
+}
+
+.card .right-content {
+  flex: 2;
+}
+
+.card .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  z-index: 1;
+  position: relative;
+  border-radius: 50%;
+}
+
+.card .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #1f1b1b;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.card:hover .picture::before {
+  height: 100%;
+}
+
+.card .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1f1b1b;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+}
+
+.card .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.card:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+/* Main content section */
+.card .main-content {
+  margin-bottom: -19px;
+}
+
+.card .main-content .title {
+  display: block;
+  font-size: 15px;
+  color: #1f1b1b;
+  text-transform: capitalize;
+  margin: 5px 37px 0;
+}
+
+.card .main-content .name {
+  padding: 0;
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+.card .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #1f1f1b;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.card:hover .social {
+  bottom: 0;
+}
+
+.card .social li {
+  display: inline-block;
+}
+
+.card .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.card .social li a:hover {
+  color: #3e3b44;
+  background-color: #f7f5ec;
+  transition: 0.5s;
+}
+
+/* Skill section */
+.skills {
+  text-align: left;
+  padding: 15px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #1f1b1b;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+.skills ul li:hover {
+  background-color: #1f1b1b;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}:root {
   --bg-color-light: #ffffff;
   --primary-bg-light: #8c43ff;
   --color-light: #333;

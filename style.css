@@ -5,14 +5,14 @@ background-color: var(--bg-color);
   font-size: 100%;
 }
 
-h2 {
+.h2 {
   color: var(--color);
   background-color: var(--bg-color);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
 }
-h2:hover {
+.h2:hover {
   color: #333;
   background-color: #f0f0f0;
   transition: all 0.3s ease;
@@ -137,7 +137,6 @@ section.one {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   flex-wrap: wrap;
 
 }
@@ -152,7 +151,7 @@ section.one {
   overflow: hidden;
   position: relative;
   box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
-  width: 100%; /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
+  width: 50%; /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
   max-width: none;
 
 }
@@ -759,27 +758,13 @@ section {
   top: 0px;
   bottom: -50px;
   width: 500px;
-  /* Độ rộng của hình ảnh */
-  background-image: url('image/back2.png');
-  /* Đường dẫn đến hình ảnh */
-  background-size: auto;
-  background-position: center;
-  z-index: -1;
 }
 
-.section.one::before {
-  left: -300px;
-  /* Khoảng cách từ hình ảnh bên trái */
-}
 
-.section.one::after {
-  right: -280px;
-  /* Khoảng cách từ hình ảnh bên phải */
-}
 
 @media (max-width: 800px) {
   .section.one {
-    padding: 15px;
+    padding: 1%;
     /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
   }
 }

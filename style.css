@@ -596,11 +596,13 @@ body {
 
 #navbar {
   transition: background-color 0.3s ease;
+  
 }
 
 /* Màu nền khi cuộn trang */
 .navbar-scrolled {
   background-color: var(--bg-color);
+  
 }
 
 /* Màu nền khi lên đầu trang */
@@ -665,6 +667,7 @@ body {
 }
 
 .nav__link::before {
+  
   content: "";
   display: block;
   position: absolute;
@@ -680,6 +683,7 @@ body {
 
 .nav__link:active::before {
   background-color: var(--bg-color);
+  
 }
 
 .nav__link:hover::before,
@@ -704,6 +708,7 @@ body {
   display: none;
   background-color: var(--bg-color);
   color: var(--color);
+  
 }
 
 a {
@@ -918,7 +923,7 @@ section {
   align-items: center;
   /* Căn giữa theo chiều dọc */
   background-color: var(--bg-color);
-  height: 100px;
+  height: 1px; /* Đặt chiều cao tự động để phù hợp với nội dung */
 }
 
 .switch {
@@ -1685,4 +1690,37 @@ button svg {
 
 .loader-square:nth-of-type(7) {
   animation-delay: -10s;
+}
+/* Zalo Button */
+.zalo-button {
+  position: fixed; /* Định vị cố định */
+  bottom: 20px; /* Khoảng cách từ đáy */
+  left: 20px; /* Khoảng cách từ bên trái */
+  z-index: 1000; /* Đảm bảo nút nằm trên cùng */
+}
+
+.zalo-button a {
+  display: inline-block;
+  padding: 10px; /* Padding cho nút */
+  background-color: rgb(255, 255, 255);
+  color: white; /* Màu chữ */
+  border-radius: 50%; /* Bo tròn nút */
+  text-decoration: none; /* Bỏ gạch chân */
+  box-shadow: 0 2px 10px rgba(245, 245, 245, 0.3); /* Đổ bóng cho nút */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.zalo-button a:hover {
+  background-color: var(--bg-color);
+}
+
+.fa-zalo {
+  font-size: 24px; /* Kích thước biểu tượng Zalo */
+}
+
+/* Media query cho kích thước mobile */
+@media (max-width: 768px) {
+  .zalo-button {
+    left: 10px; /* Đặt gần hơn với cạnh trái cho mobile */
+  }
 }

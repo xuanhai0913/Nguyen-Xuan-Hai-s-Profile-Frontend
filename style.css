@@ -1082,9 +1082,11 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  
 }
 
 .skill3 .skill-item {
+  
   background-color: #e7e7e7;
   padding: 15px;
   border-radius: 10px;
@@ -1095,10 +1097,13 @@ section {
   transform: translateY(20px);
   animation: fadeInUp 0.6s forwards;
   animation-delay: calc(var(--order) * 0.1s);
+  box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
+
 }
 
 .skill3 .skill-item img {
   max-width: 100px;
+  
   /* Adjust the size as needed */
   margin-bottom: 10px;
 }
@@ -1372,6 +1377,7 @@ section.four {
   width: 50%;
   height: auto; /* Đặt chiều cao tự động để phù hợp với nội dung */
   max-height: 80vh; /* Giới hạn chiều cao tối đa */
+  box-shadow: 20px 20px 42px #8520c9, -20px -20px 42px #8520c9;
 
   background: #202020;
   border: 1px solid #c042ff;
@@ -1410,12 +1416,13 @@ section.four {
 
 @media (max-width: 480px) {
   .card1 {
+    font-size: 10px;
     width: 95%; /* Đặt chiều rộng tối đa cho điện thoại nhỏ */
     padding: 5px; /* Thêm padding cho card */
   }
 
   .titlebar {
-    font-size: 16px; /* Giảm thêm kích thước chữ trong tiêu đề */
+    font-size: 12px; /* Giảm thêm kích thước chữ trong tiêu đề */
   }
 
   /* Giảm kích thước của nút trong card */

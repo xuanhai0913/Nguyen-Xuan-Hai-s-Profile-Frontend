@@ -152,7 +152,7 @@ section.one {
   overflow: hidden;
   position: relative;
   box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
-  width: 50%;
+  width: 80%;
   /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
   max-width: none;
 
@@ -226,7 +226,7 @@ section.one {
 
 /* Main content section */
 .card .main-content {
-  margin-bottom: -19px;
+  margin-bottom: -15px;
 }
 
 .card .main-content .title {
@@ -316,14 +316,60 @@ section.one {
   --border-color-light: #ffffff;
   /* Màu của border trong chủ đề sáng */
 }
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .social-icons ul li a {
-    width: 40px;
-    height: 50px;
+/* Kích thước màn hình lớn hơn 1024px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .card {
+    padding: 20px; /* Tăng padding cho card */
+    width: 80%; /* Giảm chiều rộng xuống 80% */
+    max-width: 80%; /* Giới hạn chiều rộng tối đa */
   }
 
+  .card .main-content .title {
+    font-size: 16px; /* Tăng kích thước chữ cho tiêu đề */
+  }
+
+  .card .main-content .name {
+    font-size: 18px; /* Tăng kích thước chữ cho tên */
+  }
+
+  .card .social li a {
+    padding: 10px; /* Tăng padding cho icon xã hội */
+    font-size: 16px; /* Tăng kích thước chữ cho icon xã hội */
+  }
+
+  .skills ul li {
+    font-size: 12px; /* Tăng kích thước chữ cho kỹ năng */
+  }
+}
+
+/* Kích thước màn hình lớn hơn 1280px */
+@media (min-width: 1281px) {
+  .card {
+    padding: 25px; /* Tăng padding cho card */
+    width: 58%; /* Đặt chiều rộng card xuống 70% */
+    max-width: 70%; /* Giới hạn chiều rộng tối đa */
+  }
+
+  .card .main-content .title {
+    font-size: 18px; /* Tăng kích thước chữ cho tiêu đề */
+  }
+
+  .card .main-content .name {
+    font-size: 20px; /* Tăng kích thước chữ cho tên */
+  }
+
+  .card .social li a {
+    padding: 12px; /* Tăng padding cho icon xã hội */
+    font-size: 17px; /* Tăng kích thước chữ cho icon xã hội */
+  }
+
+  .skills ul li {
+    font-size: 13px; /* Tăng kích thước chữ cho kỹ năng */
+  }
+}
+/* Media query cho màn hình pc */
+
+@media (max-width: 1024px) {
   .card {
     padding: 15px;
     width: 100%;
@@ -352,6 +398,107 @@ section.one {
   .skills ul li {
     font-size: 11px;
     padding: 5px;
+  }
+}
+/* Media query cho màn hình điện thoại lớn */
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card .left-content,
+  .card .right-content {
+    padding: 5px;
+  }
+
+  .card .main-content .title {
+    font-size: 14px;
+    margin: 5px 20px 0;
+  }
+
+  .card .main-content .name {
+    margin: 5px;
+  }
+
+  .card .social li a {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .skills {
+    display: block; /* Đảm bảo phần skills nằm dưới */
+    margin-top: 20px; /* Tạo khoảng cách giữa các phần */
+  }
+
+  .skills ul {
+    display: flex; /* Nếu bạn muốn kỹ năng được sắp xếp ngang */
+    flex-wrap: wrap; /* Nếu có nhiều kỹ năng, chúng sẽ xuống dòng */
+    justify-content: center; /* Căn giữa các kỹ năng */
+    padding: 0; /* Bỏ padding cho ul */
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+  }
+
+  .skills ul li {
+    font-size: 11px;
+    padding: 5px 10px; /* Tăng khoảng cách giữa các kỹ năng */
+  }
+}
+
+/* Media query cho màn hình điện thoại nhỏ */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    margin: 10px;
+    background-color: #fafafa; /* Màu nền nhẹ hơn để phân biệt rõ hơn */
+    border: 1px solid #ddd; /* Thêm viền nhẹ để làm nổi bật card */
+    border-radius: 8px; /* Bo góc nhẹ cho card */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    flex-direction: column; /* Sắp xếp các phần theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung văn bản */
+  }
+
+  .card .main-content .title {
+    font-size: 14px; /* Tăng kích thước chữ để dễ đọc hơn */
+    margin: 5px 0; /* Đặt lại khoảng cách */
+    color: #333; /* Màu chữ tối hơn cho tiêu đề */
+  }
+
+  .card .main-content .name {
+    font-size: 16px; /* Tăng kích thước chữ cho tên */
+    margin: 3px 0; /* Đặt lại khoảng cách */
+    color: #555; /* Màu chữ sáng hơn cho tên */
+  }
+
+  .skills {
+    margin-top: 15px; /* Tạo khoảng cách giữa card và phần kỹ năng */
+    background-color: #f0f0f0; /* Màu nền cho phần kỹ năng để phân biệt */
+    padding: 10px; /* Thêm padding cho phần kỹ năng */
+    border-radius: 5px; /* Bo góc cho phần kỹ năng */
+    width: 100%; /* Đảm bảo phần kỹ năng chiếm toàn bộ chiều rộng của card */
+  }
+
+  .skills ul {
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding */
+    display: flex; /* Sử dụng flexbox để căn giữa kỹ năng */
+    flex-wrap: wrap; /* Nếu có nhiều kỹ năng, chúng sẽ xuống dòng */
+    justify-content: center; /* Căn giữa các kỹ năng */
+  }
+
+  .skills ul li {
+    font-size: 12px; /* Tăng kích thước chữ cho kỹ năng */
+    padding: 5px; /* Thêm padding cho từng kỹ năng */
+    background-color: #e0e0e0; /* Màu nền cho từng kỹ năng */
+    border-radius: 4px; /* Bo góc cho kỹ năng */
+    margin: 5px; /* Tạo khoảng cách giữa các kỹ năng */
+  }
+
+  /* Ẩn phần social-icons khi màn hình nhỏ hơn 480px */
+  .social-icons {
+    display: none; /* Ẩn phần này */
   }
 }
 
@@ -736,10 +883,7 @@ section {
   height: 100vh;
   /* Chiều cao bằng cửa sổ hiện tại */
   padding: 0 200px;
-  /* Thêm khoảng cách hai bên nếu muốn */
-  /* Khoảng cách từ nội dung đến viền */
   box-sizing: border-box;
-  /* Hộp đóng gói để padding không làm thay đổi kích thước */
   display: flex;
   align-items: center;
   /* Căn giữa theo chiều dọc */
@@ -1216,18 +1360,26 @@ footer {
 
 /* Section Four*/
 section.four {
+  display: flex; /* Sử dụng flexbox để căn giữa */
+
   justify-content: center;
   background-color: var(--bg-color);
+  padding: 20px; /* Thêm khoảng cách xung quanh phần */
+
 }
 
 .card1 {
   width: 50%;
-  height: 50%;
+  height: auto; /* Đặt chiều cao tự động để phù hợp với nội dung */
+  max-height: 80vh; /* Giới hạn chiều cao tối đa */
+
   background: #202020;
   border: 1px solid #c042ff;
   font-size: 14px;
   font-family: monospace;
   overflow: auto;
+  border-radius: 8px; /* Bo góc cho card */
+
 }
 
 .titlebar {
@@ -1237,6 +1389,40 @@ section.four {
   background-color: #181818;
   width: 100%;
   text-align: right;
+  padding: 10px; /* Thêm padding để nội dung không sát viền */
+
+}
+@media (max-width: 1024px) {
+  .card1 {
+    width: 70%; /* Đặt chiều rộng cho tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .card1 {
+    width: 90%; /* Đặt chiều rộng cho điện thoại */
+  }
+
+  .titlebar {
+    font-size: 18px; /* Giảm kích thước chữ trong tiêu đề */
+  }
+}
+
+@media (max-width: 480px) {
+  .card1 {
+    width: 95%; /* Đặt chiều rộng tối đa cho điện thoại nhỏ */
+    padding: 5px; /* Thêm padding cho card */
+  }
+
+  .titlebar {
+    font-size: 16px; /* Giảm thêm kích thước chữ trong tiêu đề */
+  }
+
+  /* Giảm kích thước của nút trong card */
+  .card1 button {
+    width: 30px; /* Giảm kích thước nút */
+    height: 25px;
+  }
 }
 
 .card1 button {

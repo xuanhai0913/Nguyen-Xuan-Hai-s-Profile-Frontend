@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-background-color: var(--bg-color);
+  background-color: var(--bg-color);
   font-size: 100%;
 }
 
@@ -12,6 +12,7 @@ background-color: var(--bg-color);
   border-radius: 5px;
   text-align: center;
 }
+
 .h2:hover {
   color: #333;
   background-color: #f0f0f0;
@@ -151,7 +152,8 @@ section.one {
   overflow: hidden;
   position: relative;
   box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
-  width: 50%; /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
+  width: 50%;
+  /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
   max-width: none;
 
 }
@@ -372,6 +374,8 @@ section.one {
   --header-bg-dark: #333333;
 }
 
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -551,6 +555,8 @@ body {
 
 .smalllogo {
   display: none;
+  background-color: var(--bg-color);
+  color: var(--color);
 }
 
 a {
@@ -729,7 +735,8 @@ section {
   background-repeat: no-repeat;
   height: 100vh;
   /* Chiều cao bằng cửa sổ hiện tại */
-  padding: 0 200px; /* Thêm khoảng cách hai bên nếu muốn */
+  padding: 0 200px;
+  /* Thêm khoảng cách hai bên nếu muốn */
   /* Khoảng cách từ nội dung đến viền */
   box-sizing: border-box;
   /* Hộp đóng gói để padding không làm thay đổi kích thước */
@@ -751,20 +758,12 @@ section {
   /* Mở rộng những gì bạn cần thêm */
 }
 
-.section.one::before,
-.section.one::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  bottom: -50px;
-  width: 500px;
-}
 
 
 
 @media (max-width: 800px) {
   .section.one {
-    padding: 1%;
+    padding: 15px;
     /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
   }
 }
@@ -1435,10 +1434,17 @@ button svg {
 }
 
 .loader {
-  position: relative;
+  position: fixed; /* Đặt vị trí cố định */
   width: 96px;
   height: 96px;
   transform: rotate(0deg);
+  bottom: 20px; /* Khoảng cách từ đáy trang */
+    right: 20px; /* Khoảng cách từ bên phải */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo loader nằm trên các phần tử khác */
+
 }
 
 .loader-square {

@@ -5,10 +5,25 @@ body {
   font-size: 100%;
 }
 
+h2 {
+  color: var(--color);
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+h2:hover {
+  color: #333;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
 .social-icons ul {
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: center;
+
 }
 
 .social-icons ul li {
@@ -123,6 +138,8 @@ section.one {
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  flex-wrap: wrap;
+
 }
 
 .card {
@@ -135,7 +152,9 @@ section.one {
   overflow: hidden;
   position: relative;
   box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
-  width: 40rem;
+  width: 100%; /* Thẻ card sẽ chiếm toàn bộ chiều rộng */
+  max-width: none;
+
 }
 
 .card .left-content,
@@ -283,7 +302,9 @@ section.one {
   color: #fff;
   cursor: pointer;
   transition: 0.5s;
-}:root {
+}
+
+:root {
   --bg-color-light: #ffffff;
   --primary-bg-light: #8c43ff;
   --color-light: #333;
@@ -291,7 +312,46 @@ section.one {
   --toggleslider-light: #fff;
   --roundcolor-light: #fff;
   --svgcolor-light: #111;
-    --border-color-light: #ffffff; /* Màu của border trong chủ đề sáng */
+  --border-color-light: #ffffff;
+  /* Màu của border trong chủ đề sáng */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .social-icons ul li a {
+    width: 40px;
+    height: 50px;
+  }
+
+  .card {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card .left-content,
+  .card .right-content {
+    padding: 5px;
+  }
+
+  .card .main-content .title {
+    font-size: 14px;
+    margin: 5px 20px 0;
+  }
+
+  .card .main-content .name {
+    margin: 5px;
+  }
+
+  .card .social li a {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .skills ul li {
+    font-size: 11px;
+    padding: 5px;
+  }
 }
 
 /* Define variables for dark theme */
@@ -303,7 +363,8 @@ section.one {
   --toggleslider-dark: #e9dcdc;
   --roundcolor-dark: #333;
   --svgcolor-dark: #fff;
-    --border-color-dark: #666666; /* Màu của border trong chủ đề tối */
+  --border-color-dark: #666666;
+  /* Màu của border trong chủ đề tối */
 
 }
 
@@ -328,8 +389,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  background: var(--bg-color-light); /* Default background color */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background: var(--bg-color-light);
+  /* Default background color */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
 
 }
 
@@ -342,7 +405,8 @@ body {
   --toggleslider: var(--toggleslider-light);
   --roundcolor: var(--roundcolor-light);
   --svgcolor: var(--svgcolor-light);
-    --border-color: var(--border-color-light); /* Sử dụng màu border của chủ đề sáng */
+  --border-color: var(--border-color-light);
+  /* Sử dụng màu border của chủ đề sáng */
 
 }
 
@@ -355,7 +419,8 @@ body {
   --toggleslider: var(--toggleslider-dark);
   --roundcolor: var(--roundcolor-dark);
   --svgcolor: var(--svgcolor-dark);
-    --border-color: var(--border-color-dark); /* Sử dụng màu border của chủ đề tối */
+  --border-color: var(--border-color-dark);
+  /* Sử dụng màu border của chủ đề tối */
 
 }
 
@@ -363,16 +428,22 @@ body {
   height: 5rem;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Thay đổi từ flex-start thành space-between để căn giữa */
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  justify-content: space-between;
+  /* Thay đổi từ flex-start thành space-between để căn giữa */
+  align-items: center;
+  /* Căn giữa các phần tử theo chiều dọc */
   z-index: 10;
   position: fixed;
   background-color: var(--bg-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho thanh đầu trang */
-  padding: 0 2rem; /* Tăng padding để các nút không bị dính sát mép */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng cho thanh đầu trang */
+  padding: 0 2rem;
+  /* Tăng padding để các nút không bị dính sát mép */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
 
 }
+
 #navbar {
   transition: background-color 0.3s ease;
 }
@@ -390,18 +461,23 @@ body {
 .nav__list {
   list-style: none;
   display: flex;
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-  gap: 2rem; /* Khoảng cách giữa các mục menu */
+  align-items: center;
+  /* Căn giữa các phần tử theo chiều dọc */
+  gap: 2rem;
+  /* Khoảng cách giữa các mục menu */
 }
 
 .nav__link {
-  color: var(--color); /* Sử dụng màu chữ từ biến màu đã định nghĩa */
+  color: var(--color);
+  /* Sử dụng màu chữ từ biến màu đã định nghĩa */
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  padding: 1rem 0; /* Điều chỉnh khoảng cách giữa các nút */
+  padding: 1rem 0;
+  /* Điều chỉnh khoảng cách giữa các nút */
   position: relative;
-  transition: color 0.3s; /* Thêm hiệu ứng màu chữ khi hover */
+  transition: color 0.3s;
+  /* Thêm hiệu ứng màu chữ khi hover */
 }
 
 .nav__link::before {
@@ -410,18 +486,24 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Điều chỉnh chiều cao của thanh underline */
-  background-color: var(--primary-bg); /* Sử dụng màu primary đã định nghĩa */
-  transform: scaleX(0); /* Mặc định ẩn thanh underline */
-  transition: transform 0.3s ease-out; /* Hiệu ứng mở rộng thanh underline */
+  height: 2px;
+  /* Điều chỉnh chiều cao của thanh underline */
+  background-color: var(--primary-bg);
+  /* Sử dụng màu primary đã định nghĩa */
+  transform: scaleX(0);
+  /* Mặc định ẩn thanh underline */
+  transition: transform 0.3s ease-out;
+  /* Hiệu ứng mở rộng thanh underline */
 }
 
 .nav__link:hover::before {
-  transform: scaleX(1); /* Hiển thị thanh underline khi hover */
+  transform: scaleX(1);
+  /* Hiển thị thanh underline khi hover */
 }
 
 .logo {
-  color: var(--color); /* Sử dụng màu chữ từ biến màu đã định nghĩa */
+  color: var(--color);
+  /* Sử dụng màu chữ từ biến màu đã định nghĩa */
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -440,14 +522,14 @@ body {
   left: 0;
   height: 3px;
   width: 100%;
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
   transform-origin: right top;
   transform: scale(0, 1);
   transition: color 0.1s, transform 0.2s ease-out;
 }
 
 .nav__link:active::before {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .nav__link:hover::before,
@@ -461,7 +543,7 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-    color: var(--color);
+  color: var(--color);
   text-transform: uppercase;
   width: 25rem;
   font-family: "Raleway", sans-serif;
@@ -474,7 +556,7 @@ body {
 
 a {
   text-decoration: none;
-    color: var(--color);
+  color: var(--color);
 }
 
 /* Responsive adjustments */
@@ -509,6 +591,7 @@ a {
   .logo {
     display: none;
   }
+
   .smalllogo {
     padding: 4.7vh 8vw;
     text-align: center;
@@ -536,7 +619,7 @@ a {
     top: 1.1rem;
     z-index: 1000;
     outline: none;
-        color: var(--color);
+    color: var(--color);
 
   }
 
@@ -645,50 +728,67 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Chiều cao bằng cửa sổ hiện tại */
-  padding: 50px; /* Khoảng cách từ nội dung đến viền */
-  box-sizing: border-box; /* Hộp đóng gói để padding không làm thay đổi kích thước */
+  height: 100vh;
+  /* Chiều cao bằng cửa sổ hiện tại */
+  padding: 0 200px; /* Thêm khoảng cách hai bên nếu muốn */
+  /* Khoảng cách từ nội dung đến viền */
+  box-sizing: border-box;
+  /* Hộp đóng gói để padding không làm thay đổi kích thước */
   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  justify-content: center;
+  /* Căn giữa theo chiều ngang */
   text-align: center;
-  flex-grow: 1; /* Cho phép các section này mở rộng ít hơn section one */
-  border-left: none; /* Loại bỏ border bên trái */
-  border-right: none; /* Loại bỏ border bên phải */
-  position: relative; /* Để các phần tử pseudo có thể áp dụng vị trí tuyệt đối */
+  flex-grow: 1;
+  /* Cho phép các section này mở rộng ít hơn section one */
+  border-left: none;
+  /* Loại bỏ border bên trái */
+  border-right: none;
+  /* Loại bỏ border bên phải */
+  position: relative;
+  /* Để các phần tử pseudo có thể áp dụng vị trí tuyệt đối */
 
   /* Mở rộng những gì bạn cần thêm */
 }
+
 .section.one::before,
 .section.one::after {
   content: "";
   position: absolute;
   top: 0px;
   bottom: -50px;
-  width: 500px; /* Độ rộng của hình ảnh */
-  background-image: url('image/back2.png'); /* Đường dẫn đến hình ảnh */
+  width: 500px;
+  /* Độ rộng của hình ảnh */
+  background-image: url('image/back2.png');
+  /* Đường dẫn đến hình ảnh */
   background-size: auto;
   background-position: center;
   z-index: -1;
 }
 
 .section.one::before {
-  left: -300px; /* Khoảng cách từ hình ảnh bên trái */
+  left: -300px;
+  /* Khoảng cách từ hình ảnh bên trái */
 }
 
 .section.one::after {
-  right: -280px; /* Khoảng cách từ hình ảnh bên phải */
+  right: -280px;
+  /* Khoảng cách từ hình ảnh bên phải */
 }
 
 @media (max-width: 800px) {
   .section.one {
-    padding: 15px; /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
+    padding: 15px;
+    /* Giảm padding để phù hợp với thiết bị nhỏ hơn */
   }
 }
+
 .section.two {
   display: flex;
   justify-content: center;
-  align-items: center; /* Căn giữa theo chiều dọc */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
   background-color: var(--bg-color);
   height: 100px;
 }
@@ -708,20 +808,20 @@ section {
   display: none;
 }
 
-.switch input:checked + .button {
+.switch input:checked+.button {
   transform: translateZ(20px) rotateX(25deg);
   box-shadow: 0 -10px 20px #ff1818;
 }
 
-.switch input:checked + .button .light {
+.switch input:checked+.button .light {
   animation: flicker 0.2s infinite 0.3s;
 }
 
-.switch input:checked + .button .shine {
+.switch input:checked+.button .shine {
   opacity: 1;
 }
 
-.switch input:checked + .button .shadow {
+.switch input:checked+.button .shadow {
   opacity: 0;
 }
 
@@ -811,9 +911,11 @@ section {
   0% {
     opacity: 1;
   }
+
   80% {
     opacity: 0.8;
   }
+
   100% {
     opacity: 1;
   }
@@ -823,6 +925,7 @@ section {
   0% {
     opacity: 1;
   }
+
   80% {
     opacity: 0;
   }
@@ -835,12 +938,14 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; 
-  padding: 50px; 
-  box-sizing: border-box; 
-   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  height: 100vh;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  justify-content: center;
+  /* Căn giữa theo chiều ngang */
   text-align: center;
 }
 
@@ -865,7 +970,8 @@ section {
 }
 
 .skill3 .skill-item img {
-  max-width: 100px; /* Adjust the size as needed */
+  max-width: 100px;
+  /* Adjust the size as needed */
   margin-bottom: 10px;
 }
 
@@ -884,12 +990,14 @@ section {
   text-decoration: none;
   font-size: 14px;
 }
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 /* Button Sáng và Tối */
 .switch {
   display: block;
@@ -906,20 +1014,20 @@ section {
   display: none;
 }
 
-.switch input:checked + .button {
+.switch input:checked+.button {
   transform: translateZ(20px) rotateX(25deg);
   box-shadow: 0 -10px 20px #ff1818;
 }
 
-.switch input:checked + .button .light {
+.switch input:checked+.button .light {
   animation: flicker 0.2s infinite 0.3s;
 }
 
-.switch input:checked + .button .shine {
+.switch input:checked+.button .shine {
   opacity: 1;
 }
 
-.switch input:checked + .button .shadow {
+.switch input:checked+.button .shadow {
   opacity: 0;
 }
 
@@ -1029,78 +1137,105 @@ section {
     opacity: 0;
   }
 }
+
 /* FOOTER */
 footer {
-  background-color: #282c34; /* Màu nền footer */
-  color: white; /* Màu chữ */
-  padding: 20px 0; /* Padding trên và dưới */
-  text-align: center; /* Căn giữa nội dung */
+  background-color: #282c34;
+  /* Màu nền footer */
+  color: white;
+  /* Màu chữ */
+  padding: 20px 0;
+  /* Padding trên và dưới */
+  text-align: center;
+  /* Căn giữa nội dung */
 }
 
 .footer-content {
-  margin-bottom: 20px; /* Khoảng cách giữa các phần */
+  margin-bottom: 20px;
+  /* Khoảng cách giữa các phần */
 }
 
 .footer-content h2 {
-  font-size: 2rem; /* Kích thước tiêu đề */
-  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  font-size: 2rem;
+  /* Kích thước tiêu đề */
+  margin-bottom: 10px;
+  /* Khoảng cách dưới tiêu đề */
 }
 
 .footer-content p {
-  margin: 5px 0; /* Khoảng cách giữa các đoạn */
+  margin: 5px 0;
+  /* Khoảng cách giữa các đoạn */
 }
 
 .footer-content a {
-  color: #61dafb; /* Màu của các liên kết */
-  text-decoration: none; /* Không gạch chân */
+  color: #61dafb;
+  /* Màu của các liên kết */
+  text-decoration: none;
+  /* Không gạch chân */
 }
 
 .footer-content a:hover {
-  text-decoration: underline; /* Gạch chân khi hover */
+  text-decoration: underline;
+  /* Gạch chân khi hover */
 }
 
 .footer-download {
-  margin-top: 20px; /* Khoảng cách phía trên */
+  margin-top: 20px;
+  /* Khoảng cách phía trên */
 }
 
 .footer-download p {
-  margin-bottom: 10px; /* Khoảng cách dưới đoạn chữ */
+  margin-bottom: 10px;
+  /* Khoảng cách dưới đoạn chữ */
 }
 
 .footer-download img {
-  width: 50px; /* Kích thước logo */
-  height: 50px; /* Đảm bảo chiều cao bằng chiều rộng để có hình tròn */
-  border-radius: 50%; /* Bo tròn hình ảnh */
-  cursor: pointer; /* Hiển thị con trỏ chuột khi hover */
-  transition: transform 0.3s; /* Hiệu ứng chuyển động */
-  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  width: 50px;
+  /* Kích thước logo */
+  height: 50px;
+  /* Đảm bảo chiều cao bằng chiều rộng để có hình tròn */
+  border-radius: 50%;
+  /* Bo tròn hình ảnh */
+  cursor: pointer;
+  /* Hiển thị con trỏ chuột khi hover */
+  transition: transform 0.3s;
+  /* Hiệu ứng chuyển động */
+  object-fit: cover;
+  /* Đảm bảo hình ảnh không bị méo */
 }
 
 
 .footer-download a {
-  display: inline-block; /* Hiển thị như khối để dễ căn giữa */
-  transition: transform 0.3s; /* Hiệu ứng chuyển động */
+  display: inline-block;
+  /* Hiển thị như khối để dễ căn giữa */
+  transition: transform 0.3s;
+  /* Hiệu ứng chuyển động */
 }
 
 .footer-download a:hover {
-  transform: scale(1.1); /* Phóng to khi hover */
+  transform: scale(1.1);
+  /* Phóng to khi hover */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   footer {
-      padding: 15px 0; /* Giảm padding cho màn hình nhỏ */
+    padding: 15px 0;
+    /* Giảm padding cho màn hình nhỏ */
   }
 
   .footer-content h2 {
-      font-size: 1.5rem; /* Giảm kích thước tiêu đề */
+    font-size: 1.5rem;
+    /* Giảm kích thước tiêu đề */
   }
 }
+
 /* Section Four*/
-section.four{
+section.four {
   justify-content: center;
   background-color: var(--bg-color);
 }
+
 .card1 {
   width: 50%;
   height: 50%;
@@ -1130,8 +1265,8 @@ section.four{
   transition: 0.2s;
 }
 
-button svg path, 
-button svg rect, 
+button svg path,
+button svg rect,
 button svg polygon {
   fill: #ffffff;
 }
@@ -1200,119 +1335,128 @@ button svg {
 .s6 {
   color: #ffff00;
 }
+
 .result-container {
-    margin-top: 20px;
-    padding: 15px;
-    border: 2px solid #007bff; /* Màu viền */
-    border-radius: 5px; /* Bo tròn */
-    background-color: #f9f9f9; /* Màu nền */
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #007bff;
+  /* Màu viền */
+  border-radius: 5px;
+  /* Bo tròn */
+  background-color: #f9f9f9;
+  /* Màu nền */
 }
 
 .result-container h3 {
-    margin: 0 0 10px 0; /* Căn lề cho tiêu đề */
+  margin: 0 0 10px 0;
+  /* Căn lề cho tiêu đề */
 }
 
 .result-container p {
-    margin: 0; /* Không có khoảng cách cho đoạn văn */
-    font-size: 1.1rem; /* Kích thước chữ cho kết quả */
-    color: #333; /* Màu chữ */
+  margin: 0;
+  /* Không có khoảng cách cho đoạn văn */
+  font-size: 1.1rem;
+  /* Kích thước chữ cho kết quả */
+  color: #333;
+  /* Màu chữ */
 }
-/* Animation */ 
+
+/* Animation */
 @keyframes square-animation {
   0% {
-   left: 0;
-   top: 0;
+    left: 0;
+    top: 0;
   }
- 
+
   10.5% {
-   left: 0;
-   top: 0;
+    left: 0;
+    top: 0;
   }
- 
+
   12.5% {
-   left: 32px;
-   top: 0;
+    left: 32px;
+    top: 0;
   }
- 
+
   23% {
-   left: 32px;
-   top: 0;
+    left: 32px;
+    top: 0;
   }
- 
+
   25% {
-   left: 64px;
-   top: 0;
+    left: 64px;
+    top: 0;
   }
- 
+
   35.5% {
-   left: 64px;
-   top: 0;
+    left: 64px;
+    top: 0;
   }
- 
+
   37.5% {
-   left: 64px;
-   top: 32px;
+    left: 64px;
+    top: 32px;
   }
- 
+
   48% {
-   left: 64px;
-   top: 32px;
+    left: 64px;
+    top: 32px;
   }
- 
+
   50% {
-   left: 32px;
-   top: 32px;
+    left: 32px;
+    top: 32px;
   }
- 
+
   60.5% {
-   left: 32px;
-   top: 32px;
+    left: 32px;
+    top: 32px;
   }
- 
+
   62.5% {
-   left: 32px;
-   top: 64px;
+    left: 32px;
+    top: 64px;
   }
- 
+
   73% {
-   left: 32px;
-   top: 64px;
+    left: 32px;
+    top: 64px;
   }
- 
+
   75% {
-   left: 0;
-   top: 64px;
+    left: 0;
+    top: 64px;
   }
- 
+
   85.5% {
-   left: 0;
-   top: 64px;
+    left: 0;
+    top: 64px;
   }
- 
+
   87.5% {
-   left: 0;
-   top: 32px;
+    left: 0;
+    top: 32px;
   }
- 
+
   98% {
-   left: 0;
-   top: 32px;
+    left: 0;
+    top: 32px;
   }
- 
+
   100% {
-   left: 0;
-   top: 0;
+    left: 0;
+    top: 0;
   }
- }
- 
- .loader {
+}
+
+.loader {
   position: relative;
   width: 96px;
   height: 96px;
   transform: rotate(0deg);
- }
- 
- .loader-square {
+}
+
+.loader-square {
   position: absolute;
   top: 0;
   left: 0;
@@ -1325,36 +1469,36 @@ button svg {
   background-position: center;
   background-attachment: fixed;
   animation: square-animation 10s ease-in-out infinite both;
- }
- 
- .loader-square:nth-of-type(0) {
+}
+
+.loader-square:nth-of-type(0) {
   animation-delay: 0s;
- }
- 
- .loader-square:nth-of-type(1) {
+}
+
+.loader-square:nth-of-type(1) {
   animation-delay: -1.4285714286s;
- }
- 
- .loader-square:nth-of-type(2) {
+}
+
+.loader-square:nth-of-type(2) {
   animation-delay: -2.8571428571s;
- }
- 
- .loader-square:nth-of-type(3) {
+}
+
+.loader-square:nth-of-type(3) {
   animation-delay: -4.2857142857s;
- }
- 
- .loader-square:nth-of-type(4) {
+}
+
+.loader-square:nth-of-type(4) {
   animation-delay: -5.7142857143s;
- }
- 
- .loader-square:nth-of-type(5) {
+}
+
+.loader-square:nth-of-type(5) {
   animation-delay: -7.1428571429s;
- }
- 
- .loader-square:nth-of-type(6) {
+}
+
+.loader-square:nth-of-type(6) {
   animation-delay: -8.5714285714s;
- }
- 
- .loader-square:nth-of-type(7) {
+}
+
+.loader-square:nth-of-type(7) {
   animation-delay: -10s;
- }
+}

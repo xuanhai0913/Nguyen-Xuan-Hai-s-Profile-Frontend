@@ -347,7 +347,7 @@ section.one {
   .card {
     padding: 25px; /* Tăng padding cho card */
     width: 58%; /* Đặt chiều rộng card xuống 70% */
-    max-width: 70%; /* Giới hạn chiều rộng tối đa */
+    max-width: 80%; /* Giới hạn chiều rộng tối đa */
   }
 
   .card .main-content .title {
@@ -1692,35 +1692,125 @@ button svg {
   animation-delay: -10s;
 }
 /* Zalo Button */
-.zalo-button {
-  position: fixed; /* Định vị cố định */
+.spinner-container {
+  position: fixed;   /* Giữ phần tử cố định ở vị trí */
+  display: inline-block;
   bottom: 20px; /* Khoảng cách từ đáy */
-  left: 20px; /* Khoảng cách từ bên trái */
-  z-index: 1000; /* Đảm bảo nút nằm trên cùng */
+  left: 20px;  /* Khoảng cách từ bên trái */
+  z-index: 1000; /* Đảm bảo nó ở trên cùng */
+}
+
+.spinner {
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.zalo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa logo */
+  z-index: 2; /* Đảm bảo logo Zalo nằm trên cùng */
 }
 
 .zalo-button a {
   display: inline-block;
-  padding: 10px; /* Padding cho nút */
+  padding: 10px;
   background-color: rgb(255, 255, 255);
-  color: white; /* Màu chữ */
-  border-radius: 50%; /* Bo tròn nút */
-  text-decoration: none; /* Bỏ gạch chân */
-  box-shadow: 0 2px 10px rgba(245, 245, 245, 0.3); /* Đổ bóng cho nút */
-  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+  color: rgb(36, 36, 36);
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .zalo-button a:hover {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, rgb(186, 66, 255));
+  transform: scale(1.1); /* Phóng to khi hover */
 }
 
 .fa-zalo {
-  font-size: 24px; /* Kích thước biểu tượng Zalo */
+  font-size: 24px;
 }
 
-/* Media query cho kích thước mobile */
-@media (max-width: 768px) {
-  .zalo-button {
-    left: 10px; /* Đặt gần hơn với cạnh trái cho mobile */
+/* Media Queries */
+
+/* Desktop: Kích thước màn hình lớn */
+@media (min-width: 1200px) {
+  .spinner-container {
+    bottom: 20px;
+    left: 20px;
+  }
+  .spinner {
+    width: 120px;
+    height: 120px;
+  }
+  .zalo-button a {
+    padding: 15px;
+  }
+}
+
+/* Tablet: Màn hình có chiều rộng từ 768px đến 1199px */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .spinner-container {
+    bottom: 20px;
+    left: 20px;
+  }
+  .spinner {
+    width: 100px;
+    height: 100px;
+  }
+  .zalo-button a {
+    padding: 12px;
+  }
+}
+
+/* Mobile (landscape): Màn hình có chiều rộng từ 576px đến 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+  .spinner-container {
+    bottom: 20px;
+    left: 10px;
+  }
+  .spinner {
+    width: 90px;
+    height: 90px;
+  }
+  .zalo-button a {
+    padding: 10px;
+  }
+}
+
+/* Mobile (portrait): Màn hình có chiều rộng dưới 576px */
+@media (max-width: 575px) {
+  .spinner-container {
+    bottom: 15px;
+    left: 5px;
+  }
+  .spinner {
+    width: 80px;
+    height: 80px;
+  }
+  .zalo-button a {
+    padding: 8px;
   }
 }
